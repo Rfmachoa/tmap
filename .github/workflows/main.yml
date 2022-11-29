@@ -1,0 +1,34 @@
+name: Tmap Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.3.0
+        with:
+          java-version: "17"
+          distribution: "adopt"
+
+      - name: wget
+        uses: wei/wget@v1
+        with:
+          args: -O apktool.jar  https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.7.0.jar
+        
+      - name: build
+        run: java -jar apktool.jar b . --use-aapt2
+        
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          draft: true
+          title: "Release ${{ env.date_now }}"
+          files: |
+            dist/*.apk
