@@ -29,6 +29,5 @@ jobs:
           automatic_release_tag: "latest"
           draft: true
           title: "Release ${{ env.date_now }}"
-          files: |
-            dist/*.apk
+          files: dist/*.apk
 			
