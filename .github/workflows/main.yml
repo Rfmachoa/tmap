@@ -24,3 +24,11 @@ jobs:
       - name: build
         run: java -jar apktool.jar b . --use-aapt2
         
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          draft: true
+          title: "Release ${{ env.date_now }}"
+          files: |
+            dist/*.apk
