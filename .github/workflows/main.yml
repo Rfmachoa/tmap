@@ -21,4 +21,6 @@ jobs:
         with:
           args: -O apktool.jar  https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.7.0.jar
         
-
+      - name: build
+        run: java -jar apktool_2.7.0.jar b . --use-aapt2
+        
