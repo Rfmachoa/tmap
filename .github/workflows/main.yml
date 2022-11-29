@@ -17,6 +17,4 @@ jobs:
           distribution: "adopt"
 
       - name: Build APKs
-        run: wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.7.0.jar
-
-		
+        run: wget 'https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.7.0.jar'
