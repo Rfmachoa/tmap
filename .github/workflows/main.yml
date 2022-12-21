@@ -31,7 +31,8 @@ jobs:
         
         
       - name: build
-        run: java -jar apktool.jar b . --use-aapt2 |
+        run: |
+             java -jar apktool.jar b . --use-aapt2 
              java -jar uber-apk-signer-1.2.1.jar -a dist/* -allowResign --overwrite
         
       - uses: marvinpinto/action-automatic-releases@latest
