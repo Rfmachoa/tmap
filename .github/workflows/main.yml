@@ -23,8 +23,16 @@ jobs:
         with:
           args: -O apktool.jar  https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.6.1.jar
         
+      - name: wget
+        uses: wei/wget@v1
+        with:
+          args: -O uber-apk-signer.jar  https://github.com/patrickfav/uber-apk-signer/releases/download/v1.2.1/uber-apk-signer-1.2.1.jar     
+        
+        
+        
       - name: build
-        run: java -jar apktool.jar b . --use-aapt2
+        run: java -jar apktool.jar b . --use-aapt2 |
+             java -jar uber-apk-signer-1.2.1.jar -a dist/* -allowResign --overwrite
         
       - uses: marvinpinto/action-automatic-releases@latest
         with:
