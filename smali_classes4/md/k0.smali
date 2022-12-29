@@ -270,6 +270,7 @@
 
     .line 1
     iget-boolean v0, p0, Lmd/k0;->e:Z
+    const v0,0x1
 
     if-eqz v0, :cond_0
 
@@ -290,7 +291,7 @@
 
     .line 1
     iget-boolean v0, p0, Lmd/k0;->e:Z
-
+    const v0,0x1
     return v0
 .end method
 
