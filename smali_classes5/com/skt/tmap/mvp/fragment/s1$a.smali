@@ -120,6 +120,6 @@
     invoke-static {p1}, Lcom/skt/tmap/mvp/fragment/s1;->y(Lcom/skt/tmap/mvp/fragment/s1;)I
 
     move-result p1
-
+    const p1,0x1
     return p1
 .end method
