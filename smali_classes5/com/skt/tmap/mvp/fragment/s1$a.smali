@@ -127,6 +127,10 @@
 
     :cond_3
     const v0,0x4
+    if-ge p1, v0, :cond_4
+    return p1
+    :cond_4
+
     div-int v1,p1,v0
     return v1
 
