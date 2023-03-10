@@ -119,5 +119,11 @@
     iget p1, p1, Lcom/skt/tmap/mvp/fragment/MainRecentFragment;->T0:I
 
     const p1, 0x1
+    if-gt p1, v0, : cond_3
     return p1
+
+    :cond_3
+    const v0, 0x4
+    div-int v1,p1,v0
+    return v1
 .end method
