@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/main_setting_poi_fontsize_listview" android:background="@color/tmap_common_list_bg_nor_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
-    <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/main_setting_poi_fontsize_mapview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/main_setting_poi_fontsize_listview" />
-</RelativeLayout>

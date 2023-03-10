@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:padding="@dimen/tmap_5dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="http://" />
-    <EditText android:id="@id/tnapp_ip" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:hint="IP or Domain" android:layout_weight="2.0" />
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
-    <EditText android:id="@id/tnapp_port" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:hint="port" android:layout_weight="1.0" />
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" />
-</LinearLayout>

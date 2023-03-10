@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:tag="layout/route_preview_header_item_0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_route_header_item_height"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="@dimen/tmap_16dp" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/route_preview_item_text" android:tag="binding_1" android:paddingLeft="@dimen/tmap_7dp" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.0" />
-    <ImageView android:id="@id/route_preview_item_handle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ico_bypass" android:scaleType="center" />
-</LinearLayout>

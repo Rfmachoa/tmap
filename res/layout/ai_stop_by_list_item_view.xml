@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@drawable/ai_list_item_selector" android:paddingBottom="@dimen/tmap_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/tmap_21dp" android:textColor="@color/white_color" android:gravity="center|right|top" android:id="@id/ai_stop_by_list_item_position" android:layout_width="@dimen/tmap_30dp" android:layout_height="@dimen/tmap_24dp" android:layout_marginTop="@dimen/tmap_16dp" />
-    <TextView android:textSize="@dimen/tmap_24dp" android:textColor="@color/color_ffffff" android:ellipsize="end" android:id="@id/ai_stop_by_list_item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_8dp" android:layout_marginTop="@dimen/tmap_16dp" android:maxLines="2" android:layout_toRightOf="@id/ai_stop_by_list_item_position" />
-</RelativeLayout>

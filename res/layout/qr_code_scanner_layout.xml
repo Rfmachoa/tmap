@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.journeyapps.barcodescanner.BarcodeView android:id="@id/zxing_barcode_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" app:zxing_framing_rect_height="@dimen/tmap_260dp" app:zxing_framing_rect_width="@dimen/tmap_260dp" />
-    <com.skt.tmap.view.TmapViewfinderView android:id="@id/zxing_viewfinder_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:zxing_viewfinder_laser="@color/color_0064ff" app:zxing_viewfinder_mask="@color/color_33000000" />
-</merge>

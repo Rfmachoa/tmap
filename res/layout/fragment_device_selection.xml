@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?android:buttonBarStyle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:paddingTop="@dimen/alert_dialog_padding_top" android:paddingBottom="@dimen/alert_dialog_padding_bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="@dimen/alert_dialog_padding" android:paddingEnd="@dimen/alert_dialog_padding" />
-    <Button android:id="@id/action_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/scanner_action_scan" style="?android:buttonBarButtonStyle" />
-</LinearLayout>

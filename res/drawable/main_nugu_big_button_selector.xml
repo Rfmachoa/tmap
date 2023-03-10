@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/ic_button_nugu_pressed" />
-    <item android:state_enabled="true" android:drawable="@drawable/ic_btn_nugu_big" />
-    <item android:state_enabled="false" android:drawable="@drawable/ic_btn_nugu_error" />
-</selector>

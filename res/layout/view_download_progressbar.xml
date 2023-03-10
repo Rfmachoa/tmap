@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:background="@drawable/img_progressbar_loading_bg" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_4dp" />
-    <ImageView android:background="@drawable/img_progressbar_loading" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_4dp" />
-</merge>

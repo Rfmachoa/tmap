@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/title_layout" android:background="@color/tmap_common_title_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_common_title_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:id="@id/tmap_back" android:background="@null" android:layout_width="@dimen/tmap_52dp" android:layout_height="@dimen/tmap_common_title_height" android:src="@drawable/btn_backpress_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="@dimen/tmap_common_title_txt_size" android:textColor="@color/color_000000" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/tmap_main_menu_btn_margin_left" android:text="안내" android:fontFamily="@font/skp_go_bm" />
-</RelativeLayout>

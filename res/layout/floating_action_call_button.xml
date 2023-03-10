@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_gravity="right" android:id="@id/floating_button_layout" android:layout_width="@dimen/tmap_80dp" android:layout_height="@dimen/tmap_80dp">
-        <ImageView android:id="@id/floating_icon" android:background="@drawable/ai_call_button_selector" android:layout_width="@dimen/tmap_80dp" android:layout_height="@dimen/tmap_80dp" />
-    </RelativeLayout>
-</FrameLayout>

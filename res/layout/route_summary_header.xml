@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:tag="layout/route_summary_header_0" android:background="@color/color_f7f7f7" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_53dp"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center|left|top" android:layout_width="@dimen/tmap_14dp" android:layout_height="@dimen/tmap_14dp" android:layout_marginLeft="@dimen/tmap_21dp" android:layout_marginTop="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_11dp" android:layout_marginBottom="@dimen/tmap_29dp" android:src="@drawable/icon_narrow" />
-    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/narrow_road_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_20dp" android:layout_marginBottom="@dimen/tmap_11dp" android:fontFamily="@font/skp_go_mm" />
-</LinearLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageButton android:id="@id/ad_mute" android:background="@color/colorTransparent" android:layout_width="@dimen/tmap_32dp" android:layout_height="@dimen/tmap_32dp" android:src="@drawable/ic_btn_mute_white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageButton android:id="@id/ad_close" android:background="@color/colorTransparent" android:layout_width="@dimen/tmap_32dp" android:layout_height="@dimen/tmap_32dp" android:src="@drawable/ic_btn_close_white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <ImageButton android:id="@id/ad_more" android:background="@color/colorTransparent" android:layout_width="@dimen/tmap_80dp" android:layout_height="@dimen/tmap_32dp" android:src="@drawable/ic_btn_more_white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>

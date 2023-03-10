@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/tmap_common_list_bg_nor_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/main_setting_junction_image_listview" android:background="@color/tmap_common_list_bg_nor_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
-    <ImageView android:gravity="center" android:id="@id/junctionImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginTop="@dimen/tmap_17dp" android:layout_marginRight="@dimen/tmap_20dp" android:layout_above="@id/main_setting_junction_image_listview" android:layout_centerHorizontal="true" />
-</RelativeLayout>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
-        <com.skt.tmap.view.TmapWebView android:id="@id/ai_help_webview" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ImageButton android:id="@id/close_button" android:background="@android:color/transparent" android:layout_width="@dimen/tmap_45dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_btn_close_selector" android:layout_alignParentRight="true" />
-    </RelativeLayout>
-</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:height="476.0dip" android:drawable="@drawable/img_popup_bg_card_white" />
-    <item android:height="263.0dip" android:drawable="@drawable/img_popup_bg_gradient_01" android:bottom="213.0dip" />
-</layer-list>

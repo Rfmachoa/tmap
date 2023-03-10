@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:tag="layout/client_comm_list_0" android:background="@color/color_f5f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/client_comm_recyclerview" android:background="@color/tmap_common_list_bg_nor_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
-</RelativeLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_vertical" android:id="@id/dialogListItem" android:background="@drawable/popup_list_selector" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_60dp"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBox android:layout_gravity="center|right" android:id="@id/dialogListItemCheck" android:focusable="false" android:clickable="false" android:layout_width="@dimen/tmap_22dp" android:layout_height="@dimen/tmap_22dp" android:layout_marginRight="@dimen/tmap_20dp" android:button="@drawable/selector_radio_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:id="@id/dialogListItemText" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_59dp" android:layout_marginLeft="@dimen/tmap_30dp" android:layout_toLeftOf="@id/dialogListItemCheck" android:layout_alignParentLeft="true" />
-</RelativeLayout>

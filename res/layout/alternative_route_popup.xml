@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center|left" android:id="@id/timeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="8.0dip" android:text="10분 빠름" android:includeFontPadding="false" android:layout_marginHorizontal="8.0dip" />
-    <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:gravity="center|left" android:id="@id/priceTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="2.0dip" android:text="+3000원" android:includeFontPadding="false" android:layout_below="@id/timeTextView" android:layout_marginHorizontal="8.0dip" />
-</RelativeLayout>

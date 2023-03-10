@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="layout/favorite_routes_footer_view_0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_56dp"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_width="@dimen/tmap_12dp" android:layout_height="@dimen/tmap_12dp" android:src="@drawable/ic_favorite_add" android:scaleType="fitXY" />
-    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_11dp" android:text="@string/favorite_route_empty_add" android:fontFamily="@font/skt_tmap_300" />
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/color_f0f0f0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_137dp"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:gravity="center" android:id="@id/btn_init_sound_footer" android:background="@drawable/btn_init_voice" android:layout_width="@dimen/tmap_250dp" android:layout_height="@dimen/tmap_50dp" android:text="@string/sound_footer_init_voice" android:layout_centerInParent="true" android:lineSpacingExtra="7.0sp" />
-</RelativeLayout>

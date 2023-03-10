@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/favorite_snack_bar_root" android:tag="layout/favorite_snack_bar_layout_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_ffffff" android:layout_gravity="center_vertical" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_16dp" android:layout_weight="1.0" android:fontFamily="@font/skp_go_mm" />
-    <ImageView android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="@dimen/tmap_102dp" android:layout_height="@dimen/tmap_32dp" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp" />
-</LinearLayout>

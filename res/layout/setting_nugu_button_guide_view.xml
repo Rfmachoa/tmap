@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/tmap_28dp" android:paddingRight="@dimen/tmap_28dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/tmap_21dp" android:textColor="@color/color_373737" android:gravity="center" android:id="@id/guide_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_8dp" />
-    <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_424242" android:gravity="center" android:id="@id/guide_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_14dp" />
-    <ImageView android:layout_gravity="center_horizontal" android:id="@id/guide_image" android:layout_width="@dimen/tmap_240dp" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" />
-</LinearLayout>

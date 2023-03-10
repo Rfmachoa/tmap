@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_setting_traffic_signal" android:key="@string/use_traffic_light_Yn" android:defaultValue="N" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false" />
-    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-</PreferenceScreen>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/item_select_view_0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_56dp"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_1" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_centerVertical="true" />
-    <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_34dp" android:layout_height="@dimen/tmap_34dp" android:layout_marginRight="@dimen/tmap_14dp" android:src="@drawable/ic_check_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</RelativeLayout>

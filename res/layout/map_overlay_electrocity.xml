@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.skt.tmap.bitmap.BitmapLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:id="@id/map_overlay_ev_layout" android:background="@drawable/bg_drive_oil_map" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_30dp">
-        <ImageView android:layout_width="@dimen/tmap_18dp" android:layout_height="@dimen/tmap_18dp" android:layout_marginLeft="@dimen/tmap_2dp" android:layout_marginTop="@dimen/tmap_3dp" android:src="@drawable/ic_icn_map_oil_sort_04" />
-        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_000000" android:id="@id/map_overlay_ev_type_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_4dp" android:layout_marginRight="@dimen/tmap_4dp" android:text="@string/electric_type_fast" android:fontFamily="@font/skp_go_bm" />
-    </LinearLayout>
-</com.skt.tmap.bitmap.BitmapLayout>
