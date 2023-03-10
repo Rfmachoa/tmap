@@ -250,7 +250,7 @@
 
     .line 1
     iget-boolean v0, p0, Lnd/g0;->e:Z
-    const v0,0x1
+
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
@@ -269,7 +269,7 @@
     .locals 1
 
     iget-boolean v0, p0, Lnd/g0;->e:Z
-    const v0,0x1
+
     return v0
 .end method
 
