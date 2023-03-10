@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: tmap_9.15.apk
+apkFileName: 9.15.0.291754.20230310_flywithu.apk
 compressionType: false
 doNotCompress:
 - resources.arsc
@@ -433,4 +433,4 @@ usesFramework:
 version: 2.6.1
 versionInfo:
   versionCode: '1390'
-  versionName: 9.15.0.291754
+  versionName: 9.15.0.291754_0310
