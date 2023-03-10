@@ -118,5 +118,6 @@
     .line 7
     iget p1, p1, Lcom/skt/tmap/mvp/fragment/MainRecentFragment;->T0:I
 
+    const p1, 0x1
     return p1
 .end method
