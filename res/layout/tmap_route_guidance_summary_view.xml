@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/route_guidance_summary_layout" android:tag="layout/tmap_route_guidance_summary_view_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/route_guidance_summary_list_content" android:layout_width="fill_parent" android:layout_height="wrap_content" app:behavior_fitToContents="false" app:behavior_hideable="false" app:layout_behavior="@string/bottom_sheet_behavior">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/route_guidance_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="com.skt.tmap.util.RecyclerViewLinearLayoutManager" />
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

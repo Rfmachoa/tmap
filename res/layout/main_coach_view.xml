@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:tag="layout/main_coach_view_0" android:background="@color/color_59000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.skt.tmap.view.CustomViewPager android:id="@id/view_pager" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:overScrollMode="never" />
+    <View android:id="@id/main_bottom_layout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

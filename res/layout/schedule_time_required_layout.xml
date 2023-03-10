@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_58dp">
+        <ImageView android:id="@id/btnBackPress" android:background="@drawable/btn_backpress_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_8dp" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_4b5054" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_when_the_go" android:layout_centerInParent="true" android:fontFamily="@font/skp_go_mm" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/btnLayout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/tmap_16dp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btnStartAlarm" android:background="@drawable/tmap_common_bottom_btn_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_start_alarm_register" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/addTimeInfoDay" android:background="@color/color_f2f2f2" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_70dp" android:layout_below="@id/titleLayout">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dateInfoDay" android:visibility="visible" android:layout_width="@dimen/tmap_145dp" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_4b5054" android:id="@id/dateText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_a5a5a6" android:id="@id/weekText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_7dp" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/dateInfoTime" android:visibility="gone" android:layout_width="@dimen/tmap_145dp" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/tmap_40dp" android:textColor="@color/color_4b5054" android:gravity="center" android:id="@id/dateTextTime" android:layout_width="wrap_content" android:layout_height="fill_parent" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+            <TextView android:textSize="@dimen/tmap_10dp" android:textColor="@color/color_a5a5a6" android:id="@id/weekTextTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_after_start_time" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/timeInfo" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/takeTimeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_3673ee" android:id="@id/takeTimeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_4b5054" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_take_time" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/timeInfoZone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_7dp">
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_a5a5a6" android:id="@id/departTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+                <ImageView android:background="@drawable/calendar_poiarrow_nor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_12dp" />
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_a5a5a6" android:id="@id/destTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_12dp" android:includeFontPadding="false" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/mapContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/btnLayout" android:layout_below="@id/addTimeInfoDay">
+        <FrameLayout android:id="@id/mapViewZone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/departAndDestZone" android:background="@color/schedule_time_required_depart_dest_zone_bg" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_28dp" android:baselineAligned="false">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_b7b8ba" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_depart_poi" android:fontFamily="@font/skp_go_mm" />
+                <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_b7b8ba" android:ellipsize="end" android:id="@id/departInfoText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_b7b8ba" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_dest_poi" android:fontFamily="@font/skp_go_mm" />
+                <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_b7b8ba" android:ellipsize="end" android:id="@id/destInfoText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

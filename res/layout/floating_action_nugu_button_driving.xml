@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/floating_button_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="right" android:id="@id/nugu_floating_action_button_layout" android:background="@drawable/nugu_btn_shadow" android:layout_width="@dimen/tmap_80dp" android:layout_height="@dimen/tmap_80dp" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/nugu_floating_action_button" android:layout_width="@dimen/tmap_80dp" android:layout_height="@dimen/tmap_80dp" android:src="@drawable/main_nugu_big_button_selector" />
+    </RelativeLayout>
+    <ImageView android:id="@id/floating_music_icon" android:visibility="gone" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginTop="@dimen/tmap_5dp" android:layout_marginRight="@dimen/tmap_5dp" android:src="@drawable/ico_melon" android:layout_alignParentEnd="true" />
+    <ImageView android:layout_gravity="right" android:id="@id/floating_starbucks_icon" android:background="@drawable/ico_starbucks" android:visibility="gone" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginTop="@dimen/tmap_5dp" android:layout_marginRight="@dimen/tmap_5dp" android:layout_alignParentEnd="true" />
+</RelativeLayout>

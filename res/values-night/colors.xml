@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="carColorBlue">#ff3674e0</color>
+    <color name="carColorGreen">#ff448b47</color>
+    <color name="carColorRed">#ffc5221f</color>
+    <color name="carColorYellow">#ffd5792d</color>
+    <color name="gfp__ad__ad_mute_background_color">#ff333336</color>
+    <color name="gfp__ad__ad_mute_block_title_color">#7fffffff</color>
+    <color name="gfp__ad__ad_mute_font_color">#ffffffff</color>
+    <color name="gfp__ad__ad_mute_negative_button_background">#ff454548</color>
+    <color name="gfp__ad__ad_mute_positive_button_background">#ff2e7ce5</color>
+    <color name="gfp__ad__ad_mute_positive_button_stroke">#ff2e7ce5</color>
+</resources>

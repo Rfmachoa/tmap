@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/main_favorite_route_dialog_0" android:background="@drawable/bottom_sheet_dialog_background" android:paddingTop="@dimen/tmap_26dp" android:paddingBottom="@dimen/tmap_30dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_18dp" android:layout_marginRight="@dimen/tmap_18dp">
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_26dp">
+        <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_edit" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_edit" />
+        </LinearLayout>
+        <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_remove" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_delete" />
+        </LinearLayout>
+        <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

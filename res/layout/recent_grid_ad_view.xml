@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/native_background" android:tag="layout/recent_grid_ad_view_0" android:background="@drawable/bottom_radius_8dp_rectangle" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_60dp" android:backgroundTint="@color/color_f7f7f9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.naver.gfpsdk.GfpNativeSimpleAdView android:id="@id/native_simple_ad_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:clipToOutline="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/mapSurface" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/postion_menu_bar" />
+    <FrameLayout android:paddingBottom="@dimen/tmap_50dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:background="@drawable/share_web_position03" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_web_position02" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/position_menu_title_bar" android:background="@color/color_d6ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_49dp">
+        <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_12dp" android:text="@string/tmap_main_set_position_with_map" android:layout_toLeftOf="@id/close_icon_btn" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/close_icon_btn" android:layout_width="@dimen/tmap_22dp" android:layout_height="@dimen/tmap_22dp" android:layout_marginLeft="@dimen/tmap_18dp" android:layout_marginRight="@dimen/tmap_9dp" android:src="@drawable/btn_location_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/my_position" android:background="@drawable/btn_drive_selector" android:layout_width="@dimen/tmap_main_menu_icon_btn_width" android:layout_height="@dimen/tmap_main_menu_icon_btn_height" android:layout_marginLeft="@dimen/tmap_7dp" android:layout_marginBottom="@dimen/tmap_10dp" android:src="@drawable/btn_drive_current_position" android:scaleType="fitXY" android:layout_above="@id/postion_info_bar" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:id="@id/my_positionrotate" android:background="@drawable/btn_drive_selector" android:visibility="gone" android:layout_width="@dimen/tmap_main_menu_icon_btn_width" android:layout_height="@dimen/tmap_main_menu_icon_btn_height" android:layout_marginLeft="@dimen/tmap_7dp" android:layout_marginBottom="@dimen/tmap_10dp" android:layout_above="@id/postion_info_bar" android:layout_alignParentLeft="true">
+        <ProgressBar android:background="@null" android:layout_width="@dimen/tmap_main_menu_icon_width" android:layout_height="@dimen/tmap_main_menu_icon_height" android:indeterminateDrawable="@drawable/rotate_my_position" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/postion_info_bar" android:background="@color/color_cc4b5054" android:paddingLeft="@dimen/tmap_5dp" android:paddingRight="@dimen/tmap_5dp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_28dp" android:layout_above="@id/postion_menu_bar">
+        <ImageView android:id="@id/position_info_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bottom_infobar_icon" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_f2f2f2" android:ellipsize="marquee" android:id="@id/position_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_main_bottom_pos_info_margin_left" android:singleLine="true" android:layout_toRightOf="@id/position_info_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/postion_menu_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:splitMotionEvents="false">
+        <LinearLayout android:orientation="horizontal" android:id="@id/btn_menu_common_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp">
+            <ImageButton android:id="@id/btn_menu_1" android:background="@color/tmap_common_bottom_btn_bg_nor_color" android:layout_width="@dimen/tmap_50dp" android:layout_height="fill_parent" android:src="@drawable/btn_favorite_selector_without_press" />
+            <View android:background="@color/tmap_common_bottom_btn_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+            <Button android:textSize="@dimen/tmap_16dp" android:textColor="@color/white_color" android:gravity="center" android:id="@id/btn_menu_2" android:background="@drawable/tmap_map_bottom_btn_bg" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/search_map_start" android:layout_weight="1.0" />
+            <View android:id="@id/btn_divider_1" android:background="@color/tmap_common_bottom_btn_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+            <Button android:textSize="@dimen/tmap_16dp" android:textColor="@color/white_color" android:gravity="center" android:id="@id/btn_menu_3" android:background="@drawable/tmap_map_bottom_btn_bg" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/search_map_route" android:layout_weight="1.0" />
+            <View android:id="@id/btn_divider_2" android:background="@color/tmap_common_bottom_btn_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+            <Button android:textSize="@dimen/tmap_16dp" android:textColor="@color/white_color" android:gravity="center" android:id="@id/btn_menu_4" android:background="@drawable/tmap_map_bottom_btn_bg" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/search_map_goal" android:layout_weight="1.0" />
+            <View android:background="@color/tmap_common_bottom_btn_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+            <ImageButton android:id="@id/btn_menu_5" android:background="@drawable/tmap_map_bottom_btn_bg" android:layout_width="@dimen/tmap_50dp" android:layout_height="fill_parent" android:src="@drawable/quick_ico_share" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btn_menu_nearby_layout" android:background="@color/white_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_45dp">
+            <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_393b3c" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_near_search_btn_other_map" android:drawableRight="@drawable/btn_location_search_arr" android:drawablePadding="@dimen/tmap_2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

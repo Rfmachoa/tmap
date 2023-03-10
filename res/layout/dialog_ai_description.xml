@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_popup_box" android:paddingLeft="@dimen/tmap_10dp" android:paddingRight="@dimen/tmap_10dp" android:paddingBottom="@dimen/tmap_13dp" android:layout_width="@dimen/tmap_332dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:orientation="vertical" android:paddingTop="@dimen/tmap_8dp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/popup_scrollbar_style">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout" android:paddingLeft="@dimen/tmap_20dp" android:paddingTop="@dimen/tmap_35dp" android:paddingRight="@dimen/tmap_20dp" android:paddingBottom="@dimen/tmap_35dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/tmap_190dp" android:layout_height="@dimen/tmap_125dp" android:src="@drawable/img_drive_set" />
+            <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ai_guide_dialog_msg_first_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_35dp" android:lineSpacingExtra="@dimen/tmap_6dp" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/confirm_text" android:background="@drawable/btn_popup_1_button_confirm_selector" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp" android:text="@string/popup_btn_yes" />
+</LinearLayout>

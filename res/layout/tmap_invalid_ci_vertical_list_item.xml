@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:tag="layout/tmap_invalid_ci_vertical_list_item_0" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/tmap_radius_8dp_rectangle" android:padding="@dimen/tmap_16dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_8dp" android:backgroundTint="@color/gray_200">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/vertical_logo" android:tag="binding_1" android:layout_width="@dimen/tmap_24dp" android:layout_height="@dimen/tmap_24dp" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/gray_800" android:gravity="center_vertical" android:id="@id/vertical_name" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:fontFamily="@font/tmobi500" app:layout_constraintLeft_toRightOf="@id/vertical_logo" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_500" android:id="@id/vertical_info" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_5dp" android:includeFontPadding="false" android:fontFamily="@font/tmobi300" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/vertical_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

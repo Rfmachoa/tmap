@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message CrossroadNameEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x03
+  int32 infoIndexType = 1;
+
+  /** 교차로명칭 데이터 Collection */
+  repeated CrossroadNameElement elements = 2;
+
+}
+
+message CrossroadNameElement {
+  /** 해당 마지막 보간점 Idx */
+  int32 lastVertexIndex = 1;
+
+  /** 교차로 명칭 (NULL포함) */
+  string name = 2;
+}

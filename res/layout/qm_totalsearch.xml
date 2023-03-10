@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/qm_totalsearch_0" android:background="@color/color_ffffff" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/qm_main_title" android:background="@drawable/box_input_gr" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_48dp" android:layout_marginLeft="@dimen/tmap_12dp" android:layout_marginTop="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_12dp">
+        <ImageView android:id="@id/qm_tmap_menu" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_backpress_selector" android:layout_centerVertical="true" />
+        <com.skt.tmap.view.ExtensibleEditText android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:textColorHint="@color/color_cccccc" android:ellipsize="end" android:id="@id/qm_input_search" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/str_tmap_main_input_search_hint" android:maxLines="1" android:maxLength="50" android:layout_toLeftOf="@id/qm_search_btn" android:layout_toRightOf="@id/qm_tmap_menu" android:inputType="text" android:textCursorDrawable="@drawable/cursor_width" />
+        <LinearLayout android:gravity="center" android:id="@id/qm_search_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_5dp" android:layout_marginRight="@dimen/tmap_5dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/qm_text_clear" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/tmap_40dp" android:layout_height="@dimen/tmap_40dp" android:src="@drawable/btn_cancel_set" android:scaleType="center" />
+            <ImageView android:id="@id/qm_search_icon" android:visibility="gone" android:clickable="true" android:layout_width="@dimen/tmap_40dp" android:layout_height="@dimen/tmap_40dp" android:layout_marginLeft="@dimen/tmap_1dp" android:src="@drawable/button_search_dark" android:scaleType="center" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/qm_tmap_total_search_other_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/qm_main_title">
+        <LinearLayout android:orientation="horizontal" android:id="@id/qm_tmap_total_search_other_link_bg" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_common_search_other_link_btn_bg_size" android:layout_marginTop="@dimen/tmap_10dp">
+            <RelativeLayout android:id="@id/btn_other_link_recent" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_common_search_other_link_btn_text_size" android:gravity="center" android:id="@id/btn_other_link_recent_text" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_search_btn_other_recent" />
+                <View android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/btn_other_link_favorite" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_common_search_other_link_btn_text_size" android:gravity="center" android:id="@id/btn_other_link_favorite_text" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_search_btn_other_favorite" />
+                <View android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/btn_other_link_address" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_common_search_other_link_btn_text_size" android:gravity="center" android:id="@id/btn_other_link_address_text" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_search_btn_other_address" />
+                <View android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/btn_other_link_map" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_common_search_other_link_btn_text_size" android:gravity="center" android:id="@id/btn_other_link_map_text" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/str_search_btn_other_map" />
+                <View android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/qm_tmap_total_search_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/qm_tmap_total_search_other_link" />
+    <RelativeLayout android:id="@id/auto_complete_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/qm_main_title" />
+</RelativeLayout>

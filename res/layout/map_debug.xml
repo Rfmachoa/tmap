@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/gps_restart" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_50dp" android:text="@string/gps_file_restart" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/fast" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_50dp" android:layout_margin="@dimen/tmap_5dp" android:text="Fast" />
+        <TextView android:textSize="@dimen/tmap_24dp" android:textColor="#ff000000" android:id="@id/delay" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:id="@id/slow" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_50dp" android:layout_margin="@dimen/tmap_5dp" android:text="Slow" />
+    </LinearLayout>
+</LinearLayout>

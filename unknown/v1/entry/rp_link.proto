@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message RpLinkEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x02
+  int32 infoIndexType = 1;
+
+  /** 초기탐색 직선거리 */
+  int32 initSrchLength = 2;
+
+  /** 초기탐색SessionId */
+  string initSrchSessionId = 3;
+
+
+  /** 탐색조건 데이터 */
+  repeated RpLinkElement elements = 4;
+
+  /** TODO : string[] 처리 */
+  /** TollgateId 열 */
+  string tollgateIds = 5;
+}
+
+message RpLinkElement {
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+
+  /** 마지막 보간점 Idx */
+  int32 destVtxIndex = 2;
+
+  /** RID */
+  int32 rid = 3;
+
+  /** RID의 소요시간(단위 초) */
+  int32 sec = 4;
+
+  /** Mesh Code */
+  int32 meshCode = 5;
+
+  /** Link Id */
+  int32 linkId = 6;
+
+  /** 방향 (0:정방향, 1:역방향) */
+  int32 dir = 7;
+
+  /** 경로비교대상 (0:비대상, 1:대상) */
+  int32 compareLink = 8;
+
+}

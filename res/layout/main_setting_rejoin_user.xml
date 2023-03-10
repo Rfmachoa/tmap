@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/tmap_65dp" android:paddingBottom="@dimen/tmap_15dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_4b5054" android:ellipsize="end" android:gravity="center" android:id="@id/main_setting_remove_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tmap_setting_remove_success_title" android:singleLine="true" android:fontFamily="@font/skp_go_mm" />
+        <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_979797" android:gravity="center" android:id="@id/main_setting_remove_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_34dp" android:text="@string/tmap_setting_remove_success_body" android:lineSpacingExtra="@dimen/tmap_6dp" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/main_setting_remove_layout_bottombtn" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_common_bottom_btn_layout_height" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/tmap_common_bottom_btn_txt_size" android:textColor="@color/tmap_common_bottom_btn_txt_color" android:gravity="center" android:id="@id/btnFinishTmap" android:background="@drawable/tmap_common_bottom_btn_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/popup_btn_finish" android:layout_weight="1.0" android:textAllCaps="false" android:fontFamily="@font/skp_go_mm" />
+        <View android:background="@color/tmap_common_bottom_btn_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/tmap_common_bottom_btn_txt_size" android:textColor="@color/tmap_common_bottom_btn_txt_color" android:gravity="center" android:id="@id/btnRejoinTmap" android:background="@drawable/tmap_common_bottom_btn_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/tmap_setting_remove_join" android:layout_weight="1.0" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/hybrid_auto_complete_poi_item_0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_78dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/suggest_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginTop="@dimen/tmap_16dp" android:layout_marginRight="@dimen/tmap_18dp" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/gray_900" android:ellipsize="end" android:tag="binding_1" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" android:fontFamily="@font/tmobi500" />
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_700" android:id="@id/suggest_poi_categoty_text" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_8dp" android:includeFontPadding="false" android:fontFamily="@font/tmobi300" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginTop="@dimen/tmap_2dp" android:layout_marginRight="@dimen/tmap_18dp" app:layout_constraintTop_toBottomOf="@id/suggest_text">
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_500" android:ellipsize="end" android:tag="binding_3" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" android:fontFamily="@font/tmobi300" />
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_700" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_8dp" android:includeFontPadding="false" android:fontFamily="@font/tmobi300" />
+    </LinearLayout>
+    <View android:background="@color/gray_200" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_marginLeft="@dimen/tmap_20dp" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

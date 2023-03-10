@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message ServiceAreaEntry {
+
+  /** 정보 인덱스 Type. */
+  // default = 0x02
+  int32 infoIndexType = 1;
+
+  /** 휴게소 데이터 (n개 반복됨). */
+  repeated ServiceAreaElement elements = 2;
+
+}
+
+message ServiceAreaElement {
+
+  /** 진입 보간점 인덱스. */
+  int32 departVtxIndex = 1;
+
+  /** 진출 보간점 인덱스. */
+  int32 destVtxIndex = 2;
+
+  /** 충전소 브랜드 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/141169588) */
+  int32 gasStationBrandType = 3;
+
+  /** 주유소 브랜드 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/141169588) */
+  int32 stationBrandType = 4;
+
+  /** TODO : 화물차 쉼터 여부 & 정비소 유무 & LPG 유무 & 주유소 유무 개별 flag 제공 */
+  /** 휴게소 안내정보 (주유소유무, LPG유무, 정비소유무). */
+  int32 serviceAreaInfo = 5;
+
+  /** 휴게소 명칭 (NULL 포함). */
+  string serviceAreaName = 6;
+
+  /** POI ID */
+  int32 poiId = 7;
+
+
+}

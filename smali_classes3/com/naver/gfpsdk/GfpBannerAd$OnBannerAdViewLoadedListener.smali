@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/naver/gfpsdk/GfpBannerAd$OnBannerAdViewLoadedListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/naver/gfpsdk/GfpBannerAd;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnBannerAdViewLoadedListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onBannerAdViewLoaded(Lcom/naver/gfpsdk/GfpBannerAdView;)V
+.end method

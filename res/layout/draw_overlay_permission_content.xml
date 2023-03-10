@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_20dp" android:src="@drawable/img_draw_overlay_permission" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_2dp">
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_0064ff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_overlay_permission_dialog_1" android:textAlignment="center" app:fontFamily="@font/tmobi300" />
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_171819" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_overlay_permission_dialog_2" android:textAlignment="center" app:fontFamily="@font/tmobi300" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_171819" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_overlay_permission_dialog_3" android:textAlignment="center" app:fontFamily="@font/tmobi300" />
+</LinearLayout>

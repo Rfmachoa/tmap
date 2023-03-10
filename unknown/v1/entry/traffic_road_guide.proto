@@ -1,0 +1,114 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message TrafficRoadGuideEntry {
+  /** 정보 인덱스 type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 차로 데이터 Collection */
+  repeated RoadLaneElement elements = 2;
+
+}
+
+
+message RoadLaneElement {
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 교차점 진입 레인 정보(좌/우 포켓 차로수 포함)  */
+  int32 crossInLaneInfo = 2;
+
+  /** 교차점 진입 차로 수 */
+  int32 crossInLaneCount = 3;
+
+  /** 좌 포켓 차로 수) */
+  int32 crossInLLaneCount = 4;
+
+  /** 좌 포켓 차로 수 */
+  int32 crossInRLaneCount = 5;
+
+  /** 비 유효차로 정보 개수 */
+  int32 invalidLaneInfoCnt = 6;
+
+  /** 버스전용차로 구분코드
+   *  0:버스전용차로 없음
+   *  1:버스우측차로제(전일)
+   *  2:버스우측차로제(시간제)
+   *  3:버스중앙차로제(전일)
+   *  4:버스중앙차로제(시간제) */
+  int32 busLaneCode = 7;
+
+  /** TODO : 차로정보 제공방식 개선 필요 */
+  /** 권장 차로 레인정보 (1.2) */
+  int32 recmdLaneInfo = 8;
+
+  /** 권장 차로 각도 정보(1.2) */
+  int32 recmdLaneAngle = 9;
+
+  /** 유효 차로 레인정보(1.2) */
+  int32 laneInfo = 10;
+
+  /** 유효 차로 각도 정보(1.2) */
+  int32 laneAngle = 11;
+
+  /** 고가차로 레인정보(4.0추가) */
+  int32 overPassLaneInfo = 12;
+
+  /** 지하차로 레인정보(4.0추가) */
+  int32 underPassLaneInfo = 13;
+
+  /**
+   * 도로종별 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995894)
+   */
+  int32 roadType = 14;
+
+  /** 비 유효차로 데이터 Collection */
+  repeated InvalidLaneElement invalidLaneElements = 15;
+
+  /** 버스전용차로 데이터 Collection */
+  BusLaneElement busLaneElement = 16;
+
+}
+
+
+message InvalidLaneElement {
+
+  /** 비 유효차로 레인정보 #1 데이터 */
+  int32 invalidLaneInfo = 1;
+
+  /** 비 유효차로 각도정보 #1 데이터 */
+  int32 invalidLaneAngle = 2;
+
+}
+
+message BusLaneElement {
+
+  /** 평일 오전 시작시간(시분) */
+  int32 busLaneWeekDayAMStartTime = 1;
+
+  /** 평일 오전 종료시간(시분) */
+  int32 busLaneWeekDayAMEndTime = 2;
+
+  /** 평일 오후 시작시간(시분) */
+  int32 busLaneWeekDayPMStartTime = 3;
+
+  /** 평일 오후 종료시간(시분) */
+  int32 busLaneWeekDayPMEndTime = 4;
+
+  /** 토요일 시작시간(시분) */
+  int32 busLaneSaturdayStartTime = 5;
+
+  /** 토요일 종료시간(시분) */
+  int32 busLaneSaturdayEndTime = 6;
+
+  /** 휴일 시작시간(시분) */
+  int32 busLaneHolidayStartTime = 7;
+
+  /** 휴일 종료시간(시분) */
+  int32 busLaneHolidayEndTime = 8;
+}

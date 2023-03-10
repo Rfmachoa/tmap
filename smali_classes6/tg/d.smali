@@ -1,0 +1,44 @@
+.class public final synthetic Ltg/d;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ltg/g$a;
+
+
+# static fields
+.field public static final synthetic a:Ltg/d;
+
+
+# direct methods
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ltg/d;
+
+    invoke-direct {v0}, Ltg/d;-><init>()V
+
+    sput-object v0, Ltg/d;->a:Ltg/d;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(ILcom/tmapmobility/tmap/exoplayer2/Format;ZLjava/util/List;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Ltg/g;
+    .locals 0
+
+    invoke-static/range {p1 .. p6}, Ltg/e;->f(ILcom/tmapmobility/tmap/exoplayer2/Format;ZLjava/util/List;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Ltg/g;
+
+    move-result-object p1
+
+    return-object p1
+.end method

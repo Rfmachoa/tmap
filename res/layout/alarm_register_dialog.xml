@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/alarmRegisterDialog" android:background="@drawable/bg_popup_box" android:layout_width="@dimen/tmap_332dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_body_layout" android:paddingTop="@dimen/tmap_8dp" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp" android:layout_weight="1.0" style="@style/popup_scrollbar_style">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="@dimen/tmap_20dp" android:paddingRight="@dimen/tmap_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_35dp">
+                <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:id="@id/startTimeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_35dp" android:lineSpacingExtra="@dimen/tmap_6dp" />
+                <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_737373" android:id="@id/summaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_35dp" android:text="@string/str_start_alarm_register_summary" />
+            </LinearLayout>
+            <View android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/message_container" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/onTimeLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_59dp">
+                    <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:id="@id/onTimeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_ontime" android:layout_centerVertical="true" />
+                    <CheckBox android:id="@id/onTimeCheckBox" android:duplicateParentState="true" android:layout_width="@dimen/tmap_22dp" android:layout_height="@dimen/tmap_22dp" android:layout_marginRight="@dimen/tmap_20dp" android:checked="true" android:button="@drawable/selector_radio_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/tmap_30dp" android:layout_below="@id/message_container" />
+                <RelativeLayout android:id="@id/min15agoLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_54dp">
+                    <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:id="@id/min15agoText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_15min_ago" android:layout_centerVertical="true" />
+                    <CheckBox android:id="@id/min15agoCheckBox" android:duplicateParentState="true" android:layout_width="@dimen/tmap_22dp" android:layout_height="@dimen/tmap_22dp" android:layout_marginRight="@dimen/tmap_20dp" android:button="@drawable/selector_radio_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/tmap_30dp" android:layout_below="@id/message_container" />
+                <RelativeLayout android:id="@id/nonAlarmLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_54dp">
+                    <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_none_alarm" android:layout_centerVertical="true" />
+                    <CheckBox android:id="@id/nonAlarmCheckBox" android:duplicateParentState="true" android:layout_width="@dimen/tmap_22dp" android:layout_height="@dimen/tmap_22dp" android:layout_marginRight="@dimen/tmap_20dp" android:button="@drawable/selector_radio_btn" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp" android:layout_marginBottom="@dimen/tmap_13dp">
+        <Button android:textSize="@dimen/tmap_common_popup_dialog_btn_text_size" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/btnCancel" android:background="@drawable/btn_popup_left_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/str_tmap_common_cancel" android:layout_weight="1.0" android:textAllCaps="false" />
+        <TextView android:textSize="@dimen/tmap_common_popup_dialog_btn_text_size" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/btnConfirm" android:background="@drawable/btn_popup_right_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/str_tmap_common_confirm" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ai_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/ai_sms_read_close_button" android:background="@android:color/transparent" android:layout_width="@dimen/tmap_45dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_btn_close_selector" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_29dp" android:layout_marginRight="@dimen/tmap_29dp">
+            <TextView android:textSize="@dimen/tmap_24dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/ai_sms_read_content_text" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0dp" android:layout_marginTop="@dimen/tmap_25dp" android:layout_weight="1.0" android:lineSpacingExtra="@dimen/tmap_4dp" />
+            <RelativeLayout android:id="@id/ai_sms_read_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_25dp">
+                <ImageView android:id="@id/ai_sms_read_previous_button" android:layout_width="@dimen/tmap_66dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_communi_pre_btn_selector" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="@dimen/tmap_30dp" android:gravity="center" android:id="@id/ai_sms_read_index_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ai_sms_read_next_button" android:layout_toRightOf="@id/ai_sms_read_previous_button" />
+                <ImageView android:id="@id/ai_sms_read_next_button" android:layout_width="@dimen/tmap_66dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_communi_next_btn_selector" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/tmap_main_bottom_dialog_0" android:background="@drawable/bottom_sheet_dialog_background" android:paddingTop="@dimen/tmap_16dp" android:paddingBottom="@dimen/tmap_30dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_40dp" android:layout_marginLeft="@dimen/tmap_18dp" android:layout_marginRight="@dimen/tmap_8dp">
+        <TextView android:textSize="@dimen/tmap_20dp" android:textColor="@color/black_color" android:ellipsize="end" android:id="@id/bottom_menu_name" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:fontFamily="@font/skp_go_bm" />
+        <TextView android:textSize="@dimen/tmap_12dp" android:textColor="@drawable/search_result_list_detail_color" android:gravity="center" android:tag="binding_2" android:background="@drawable/search_result_list_detail_bg" android:layout_width="@dimen/tmap_42dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginLeft="@dimen/tmap_15dp" android:layout_marginRight="@dimen/tmap_15dp" android:text="@string/txt_detail" android:layout_alignBottom="@id/title_text" android:layout_alignParentRight="true" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_10dp">
+        <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_favorite" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_favorite" />
+        </LinearLayout>
+        <View android:tag="binding_4" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_fix" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/bottom_menu_fix_image" android:tag="binding_6" android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" />
+        </LinearLayout>
+        <View android:tag="binding_7" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_edit" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_edit" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_home" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_home" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_office" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_office" />
+        </LinearLayout>
+        <View android:tag="binding_11" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_menu_remove" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/main_longpress_btn_delete" />
+        </LinearLayout>
+        <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

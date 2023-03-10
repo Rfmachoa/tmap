@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message GasStationEntry {
+
+  /** 정보 인덱스 type (point) */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 주유소 데이터 Collection */
+  repeated GasStationElement elements = 2;
+
+}
+
+message GasStationElement {
+
+  /** 해당보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 주유소형식(코드테이블 참조: https://tmobi.atlassian.net/wiki/spaces/RSD/pages/137234419) */
+  int32 gasType = 2;
+
+  /** 주유소브랜드코드(코드테이블 참조 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/141169588) */
+  int32 gasBrandCode = 3;
+
+  /** 주유소 시설정보 데이터 코드 비트값(코드테이블 참조 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/139953931) */
+  int32 gasFacilityCode = 4;
+
+  /** 매칭된 도로종별 코드(코드테이블 참조 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995894) */
+  int32 roadType = 5;
+
+  /** 고급휘발유 판매 유무(0:미조사1:Yes, 2:No)(코드테이블 참조) */
+  int32 premiumGasSaleFlag = 6;
+
+  /** 길안내 상에 최저가 주유소 구분(0:아님, 1:최저가) */
+  int32 lowestGasOption = 7;
+
+  /** 주유소위치 X좌표(SK정규화좌표 0.1초단위) */
+  int64 gasXPos = 8;
+
+  /** 주유소위치 Y좌표(SK정규화좌표 0.1초단위) */
+  int64 gasYPos = 9;
+
+  /** 휘발유값 (단위 원)*/
+  int32 gasPrice = 10;
+
+  /** 경유값 (단위 원)*/
+  int32 dieselPrice = 11;
+
+  /** 등유값 (단위 원)*/
+  int32 paraffinPrice = 12;
+
+  /** LPG값 (단위 원)*/
+  int32 lpgPrice = 13;
+
+  /** 고급휘발유값 (단위 원)*/
+  int32 premiumGasPrice = 14;
+
+  /** 고급경유값 (단위 원)*/
+  int32 premiumDieselPrice = 15;
+
+  /** 고급등유값 (단위 원)*/
+  int32 premiumParaffinPrice = 16;
+
+  /** POI ID */
+  int32 poiId = 17;
+
+  /** 제휴카드 할인 유무(0:없음, 1:있음) */
+  int32 associateCard = 18;
+
+  /** 셀프 여부(0:일반, 1:셀프) */
+  int32 selfYn = 19;
+
+  /** 화물차 우대 주유소 여부 (0:일반, 1:우대) */
+  int32 truckStationFlag = 20;
+
+  /** 주유소명칭 데이터(NULL포함) */
+  string name = 21;
+}

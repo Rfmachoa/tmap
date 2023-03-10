@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
+    <RelativeLayout android:id="@id/main_setting_dm_layout_adapter" android:background="@color/tmap_common_list_bg_nor_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
+    <ListView android:id="@id/main_setting_dm_listview_adapter" android:background="@color/tmap_common_list_bg_nor_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
+</RelativeLayout>

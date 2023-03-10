@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/tmap_map_near_fragment_0" android:background="@drawable/bottom_sheet_white_background" android:paddingTop="@dimen/tmap_main_bottom_sheet_handle_top_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_gravity="center_horizontal" android:id="@id/bottom_content_handle" style="@style/bottom_sheet_handle" />
+        <View android:id="@id/empty_filter_sort_margin" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_17dp" />
+        <include android:id="@id/filter_sort_contents" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_48dp" layout="@layout/near_filter_sort_header" />
+        <View android:background="@color/color_f0f0f0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" />
+        <FrameLayout android:id="@id/ad_animated_image_container" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/ad_image_wrap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/tmap_near_search_holder_ad_image_margin">
+                <RelativeLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_near_search_holder_ad_image_height">
+                    <ImageView android:id="@id/ad_image" android:background="@drawable/white_button_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </FrameLayout>
+        </FrameLayout>
+        <include android:id="@id/switch_option" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_86dp" layout="@layout/near_switch_option" />
+    </LinearLayout>
+    <com.skt.tmap.view.DimensionedNestedScrollView android:id="@id/nested_scroll_view" android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_near_no_contents" />
+                    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_a1a3a6" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_13dp" android:text="@string/tmap_near_search_empty" android:lineSpacingExtra="@dimen/tmap_5dp" android:fontFamily="@font/skp_go_mm" />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </com.skt.tmap.view.DimensionedNestedScrollView>
+</LinearLayout>

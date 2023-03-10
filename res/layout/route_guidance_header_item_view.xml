@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_route_header_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/black_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/route_guidance_item_text" android:paddingLeft="@dimen/tmap_7dp" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/tmap_route_start_hint" android:maxLines="1" android:layout_weight="1.0" />
+    <ImageView android:id="@id/route_guidance_item_handle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ico_bypass" android:scaleType="center" />
+</LinearLayout>

@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message EvStationEntry {
+
+  /** 정보 인덱스 type (point) */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 충전소 데이터 Collection */
+  repeated EvStationElement elements = 2;
+
+}
+
+message EvStationElement {
+
+  /** 해당보간점 Idx
+   * : 경로주변 충전소인 경우 0
+   */
+  int32 vertexIndex = 1;
+
+  /** POI ID
+   * : My e-poi 충전소인 경우 0
+   */
+  int32 poiId = 2;
+
+  /** 충전소에 매칭된 도로 종별 제공(코드테이블 참조: https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995894) */
+  int32 roadType = 3;
+
+  /** 충전소위치 X좌표(SK정규화좌표 0.01초단위) */
+  int32 stationXPos = 4;
+
+  /** 충전소위치 Y좌표(SK정규화좌표 0.01초단위) */
+  int32 stationYPos = 5;
+
+  /** 충전소 명칭 */
+  string name = 6;
+
+  /** 충전소가 경로상 존재 여부(0:경로상, 1:경로주변) */
+  int32 inRoadYn = 7;
+
+  /** DcCHA 지원 여부(0:미지원, 1:지원) */
+  int32 useDcCHAYn = 8;
+
+  /** AC3 지원 여부(0:미지원, 1:지원) */
+  int32 useAC3Yn = 9;
+
+  /** DcCombo 지원 여부(0:미지원, 1:지원) */
+  int32 useDcComboYn = 10;
+
+  /** 저속충전 지원 여부(0:미지원, 1:지원) */
+  int32 useSlowYn = 11;
+
+  /** 테슬라 슈퍼차저 지원 여부(0:미지원, 1:지원) */
+  int32 useTeslaSuperchargerYn = 12;
+
+  /** 충전소 종류(1 : 서버가 제공하는 충전소, 2 : 유저가 요청했던 My e-poi 충전소) */
+  int32 stationType = 13;
+
+  /** 필수 충전 대상 여부(0:대상아님, 1:충전대상) */
+  int32 essentialChargeFlag = 14;
+
+  /** 셀프 유무(0:일반, 1: 셀프) */
+  int32 selfYn = 15;
+
+  /** 급속충전종류(0 : 급속 아님, 1 : 200kW 층잔) */
+  int32 quickChargeType = 16;
+
+  /** 충전소 종류 명칭 */
+  string typeName = 17;
+
+  /** 전체 충전기 수 */
+  int32 chargerCount = 18;
+
+  /** 이용가능한 충전기 수 */
+  int32 availableChargerCount = 19;
+
+  /** 충전 속도(이용가능한 충전기 대상 속도 제공 / 0: 정보없음, 1: 완속, 2: 급속, 3: 초급속) */
+  int32 chargerSpeedType = 20;
+
+  /** 사업자별 충전기 정보 개수 */
+  repeated EvStationOperatorElement operatorElementCount = 22;
+
+}
+
+message EvStationOperatorElement {
+  /** 이용가능 초고속 충전기 개수 */
+  int32 availableSuperFastChargerCount = 1;
+
+  /** 이용가능 고속 충전기 개수*/
+  int32 availableFastChargerCount = 2;
+
+  /** 이용가능 완속 충전기 개수 */
+  int32 availableSlowChargerCount = 3;
+
+  /** 사업자 코드 */
+  string operatorCode = 4;
+
+  /** 사업자 Code 명칭 */
+  string operatorName = 6;
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_476ade" android:gravity="center_vertical" android:id="@id/scan_title" android:padding="@dimen/tmap_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message RoadNameEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x03
+  int32 infoIndexType = 1;
+
+  /** 도로명칭 데이터 Collection */
+  repeated RoadNameElement elements = 2;
+}
+
+message RoadNameElement {
+  /** 해당 마지막 보간점 Idx */
+  int32 lastVertexIndex = 1;
+
+  /** 화면표출여부(0:미표출, 1:표출) */
+  int32 viewFlag =  2;
+
+  /** 도로 명칭 (NULL포함) */
+  string name = 3;
+}

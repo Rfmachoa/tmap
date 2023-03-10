@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/time_prediction_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/body_time_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/title_layout" android:background="@drawable/bg_time_top" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_140dp">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/title_body_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_000000" android:id="@id/current_day_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="111" android:fontFamily="@font/skp_go_mm" />
+                <TextView android:textSize="@dimen/tmap_30dp" android:textColor="@color/color_000000" android:id="@id/current_time_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_6dp" android:text="1212" android:fontFamily="@font/skp_go_bm" />
+                <Button android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_000000" android:id="@id/another_time_button" android:background="@drawable/btn_timechange_selector" android:layout_width="@dimen/tmap_90dp" android:layout_height="@dimen/tmap_32dp" android:layout_marginTop="@dimen/tmap_10dp" android:text="@string/str_btn_another_time" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:id="@id/bar_graph_layout" android:background="@color/color_ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_300dp">
+            <com.skt.tmap.view.graph.HorizentalBarGraphView android:layout_gravity="center" android:id="@id/bar_graph_view" android:background="@color/color_ffffff" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_262dp" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/body_picker_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/body_picker_view" layout="@layout/time_prediction_dialog_picker_layout" />
+    </LinearLayout>
+</RelativeLayout>

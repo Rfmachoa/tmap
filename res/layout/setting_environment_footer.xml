@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/gray_100" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/layoutSettingFooter" android:paddingTop="@dimen/tmap_60dp" android:paddingBottom="@dimen/tmap_60dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:paddingBottom="@dimen/tmap_15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_700" android:id="@id/textViewNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_reference" android:fontFamily="@font/tmobi300" />
+            <View android:layout_gravity="center_vertical" android:background="@color/gray_400" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_16dp" android:layout_marginRight="@dimen/tmap_16dp" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_700" android:id="@id/textViewUserInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_user_info" android:fontFamily="@font/tmobi500" />
+            <View android:layout_gravity="center_vertical" android:background="@color/gray_400" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_16dp" android:layout_marginRight="@dimen/tmap_16dp" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/gray_700" android:id="@id/textViewCopyrightInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_copyright_info" android:fontFamily="@font/tmobi300" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

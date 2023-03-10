@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message TileEntry {
+
+  // default = 0x03
+  int32 infoIndexType = 1;
+
+  //타일 데이터 Collection
+  repeated TileElement elements = 2;
+
+}
+
+
+message TileElement {
+  /** X 방향 타일 Code(경도방향) */
+  int32 tileXCode = 1;
+
+  /** Y 방향 타일 Code(위도방향) */
+  int32 tileYCode = 2;
+
+  /** 해당 마지막 보간점 Idx */
+  int32 destVtxIndex = 3;
+}
+

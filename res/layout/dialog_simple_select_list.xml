@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_popup_box" android:paddingLeft="@dimen/tmap_10dp" android:paddingTop="@dimen/tmap_8dp" android:paddingRight="@dimen/tmap_10dp" android:paddingBottom="@dimen/tmap_13dp" android:layout_width="@dimen/tmap_332dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollViewSimpleDialog" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/popup_scrollbar_style">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutSimpleBody" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textSize="@dimen/tmap_common_popup_dialog_btn_text_size" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/image_button_close" android:background="@drawable/btn_popup_1_button_cancel_selector" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp" android:text="@string/str_tmap_common_cancel" android:textAllCaps="false" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_setting_poi_fontsize_main" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/tmap_20dp">
+        <TextView android:textSize="@dimen/tmap_common_list_main_txt_size" android:textColor="@color/color_000000" android:id="@id/main_setting_poi_fontsize_item_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentLeft="true" android:fontFamily="@font/skp_go_mm" />
+        <CheckBox android:id="@id/main_setting_poi_fontsize_item_checkbox" android:layout_width="@dimen/tmap_common_btn_radio_size" android:layout_height="@dimen/tmap_common_btn_radio_size" android:button="@drawable/selector_radio_btn" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/bottom_line_view" android:background="@color/color_e6e6e6" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0.5dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_alignParentBottom="true" />
+</LinearLayout>

@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message TruckTimeRestrictionEntry {
+  /** 정보 인덱스 type */
+  //default = 0x02
+  int32 infoIndexType = 1;
+
+  repeated RestrictionElement elements = 2;
+}
+
+message RestrictionElement {
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+
+  /** 마지막 보간점 Idx */
+  int32 destVtxIndex = 2;
+
+  /** 제한 초과 알람코드(0:제한 미초과, 1:제한 초과) */
+  int32 restrictionExceedType = 3;
+
+  /** 시간제한 통제 정보 */
+  repeated TruckRestriction restrictionList = 4;
+}
+
+
+message TruckRestriction {
+
+  /** 화물자동차 적재 제한 중량(kg) */
+  int32 weight = 1;
+
+  /** 통행불가 시간대_1 (09101800 : 오전 9시10분부터 오후 6시까지 통제) */
+  string time1 = 2;
+
+  /** 통행불가 요일_1
+    * 0:정보없음, 1:월, 2:화, 3:수, 4:목, 5:금, 6:토, 7:일, 8:공휴일
+    * ex) 12345678:해당 시간대 모든 요일 통제
+    * ex) 00000678 : 해당 시간대 토요일, 일요일, 공휴일 통제
+    */
+  string dayOfTheWeek1 = 3;
+
+  /** 통행불가 시간대_2 */
+  string time2 = 4;
+
+  /** 통행불가 요일_2 */
+  string dayOfTheWeek2 = 5;
+
+  /** 통행불가 시간대_3 */
+  string time3 = 6;
+
+  /** 통행불가 요일_3 */
+  string dayOfTheWeek3 = 7;
+
+  /** 통행불가 시간대_4 */
+  string time4 = 8;
+
+  /** 통행불가 요일_4 */
+  string dayOfTheWeek4 = 9;
+
+}

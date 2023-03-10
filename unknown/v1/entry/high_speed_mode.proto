@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message HighSpeedModeEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x02
+  int32 infoIndexType = 1;
+
+  /** 고속모드구간 데이터 (n개 반복됨) */
+  repeated HighSpeedModeElement elements = 2;
+
+}
+
+message HighSpeedModeElement {
+
+  /** 시작 보간점 Idx (링크의 시작보간점Idx) */
+  int32 departVtxIndex = 1;
+
+  /** 마지막 보간점 Idx
+   * (안내점보간점Idx와 중복 방지로 링크의 종료보간점Idx - 1)
+   * (단말에서 고속모드 진출 2km 전방에서 지도보기로 전환) */
+  int32 destVtxIndex = 2;
+}

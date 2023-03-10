@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/tmap_90dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/main_rd_add_fixed_layout" android:background="@drawable/box_main_destination_selector" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_79dp" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginTop="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_10dp">
+        <ImageView android:id="@id/main_rd_add_fixed_icon" android:paddingBottom="@dimen/tmap_3dp" android:duplicateParentState="true" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_30dp" android:layout_marginLeft="@dimen/tmap_15dp" android:layout_marginRight="@dimen/tmap_m5dp" android:src="@drawable/ic_icon_pin" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_0064ff" android:id="@id/main_rd_add_fixed_item" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_13dp" android:text="@string/str_tmap_common_add_fixed_item" android:layout_toRightOf="@id/main_rd_add_fixed_icon" android:layout_centerVertical="true" android:fontFamily="@font/tmobi300" />
+        <ImageView android:id="@id/main_rd_add_fixed_plus_icon" android:duplicateParentState="true" android:layout_width="@dimen/tmap_20dp" android:layout_height="@dimen/tmap_20dp" android:layout_marginRight="@dimen/tmap_20dp" android:src="@drawable/btn_spot_add_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>
