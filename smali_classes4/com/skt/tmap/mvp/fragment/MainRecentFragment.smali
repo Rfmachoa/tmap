@@ -3287,7 +3287,7 @@
 
     .line 9
     iget-boolean v2, v2, Lnd/g0;->e:Z
-
+    const v2,0x1
     if-nez v2, :cond_4
 
     .line 10
