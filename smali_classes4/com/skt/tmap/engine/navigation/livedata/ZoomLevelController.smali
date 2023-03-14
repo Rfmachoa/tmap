@@ -342,7 +342,7 @@
     :array_5
     .array-data 4
         0x44fa0000    # 2000.0f
-        0x41200000    # 10.0f
+        0x41180000    # 9.5f
         0x42820000    # 65.0f
     .end array-data
 
