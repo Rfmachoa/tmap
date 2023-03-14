@@ -821,13 +821,11 @@
 .end method
 
 .method public final getZoomLevel()I
-    .locals 3
+    .locals 1
 
     iget v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->zoomLevel:I
-    const v1,0x1
-    sub-int v2,v0,v1
 
-    return v2
+    return v0
 .end method
 
 .method public final setAutoZoomType(Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;)V
