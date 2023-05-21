@@ -21,7 +21,7 @@ jobs:
       - name: wget
         uses: wei/wget@v1
         with:
-          args: -O apktool.jar  https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.6.1.jar
+          args: -O apktool.jar  https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.7.0.jar
         
       - name: wget
         uses: wei/wget@v1
