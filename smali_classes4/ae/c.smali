@@ -1,0 +1,1270 @@
+.class public final Lae/c;
+.super Ljava/lang/Object;
+.source "TmapVoicePlayer.kt"
+
+
+# annotations
+.annotation build Landroidx/compose/runtime/internal/StabilityInferred;
+    parameters = 0x0
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lae/c$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final e:I = 0x8
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public b:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "[B>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public c:Z
+
+.field public final d:I
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "TmapVoicePlayer"
+
+    .line 2
+    iput-object v0, p0, Lae/c;->a:Ljava/lang/String;
+
+    .line 3
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lae/c;->b:Ljava/util/HashMap;
+
+    const/4 v0, 0x1
+
+    .line 4
+    iput-boolean v0, p0, Lae/c;->c:Z
+
+    const/4 v0, 0x3
+
+    .line 5
+    iput v0, p0, Lae/c;->d:I
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lae/c;)Ljava/util/HashMap;
+    .locals 0
+
+    iget-object p0, p0, Lae/c;->b:Ljava/util/HashMap;
+
+    return-object p0
+.end method
+
+.method public static final synthetic b(Lae/c;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lae/c;->a:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static final synthetic c(Lae/c;)I
+    .locals 0
+
+    iget p0, p0, Lae/c;->d:I
+
+    return p0
+.end method
+
+.method public static final synthetic d(Lae/c;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lae/c;->c:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 8
+    .param p1    # Landroid/content/Context;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "word"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "message"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    const/16 v2, 0x3e8
+
+    int-to-long v2, v2
+
+    div-long/2addr v0, v2
+
+    const-string v2, "notification"
+
+    .line 2
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "null cannot be cast to non-null type android.app.NotificationManager"
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v2, Landroid/app/NotificationManager;
+
+    .line 3
+    new-instance v3, Landroidx/core/app/NotificationCompat$e;
+
+    const-string v4, "noti_voice_error"
+
+    invoke-direct {v3, p1, v4}, Landroidx/core/app/NotificationCompat$e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 4
+    invoke-static {}, Lcom/skt/tmap/util/f;->D()I
+
+    move-result v5
+
+    .line 5
+    iget-object v6, v3, Landroidx/core/app/NotificationCompat$e;->U:Landroid/app/Notification;
+
+    iput v5, v6, Landroid/app/Notification;->icon:I
+
+    .line 6
+    invoke-virtual {v3, p2}, Landroidx/core/app/NotificationCompat$e;->P(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    .line 7
+    invoke-virtual {p2, p3}, Landroidx/core/app/NotificationCompat$e;->O(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    const/4 v3, 0x1
+
+    .line 8
+    invoke-virtual {p2, v3}, Landroidx/core/app/NotificationCompat$e;->D(Z)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    .line 9
+    invoke-virtual {p2, v3}, Landroidx/core/app/NotificationCompat$e;->k0(I)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    const/4 v5, -0x1
+
+    .line 10
+    invoke-virtual {p2, v5}, Landroidx/core/app/NotificationCompat$e;->T(I)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    .line 11
+    new-instance v5, Landroidx/core/app/NotificationCompat$c;
+
+    invoke-direct {v5}, Landroidx/core/app/NotificationCompat$c;-><init>()V
+
+    invoke-virtual {v5, p3}, Landroidx/core/app/NotificationCompat$c;->A(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$c;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Landroidx/core/app/NotificationCompat$e;->z0(Landroidx/core/app/NotificationCompat$k;)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    const-string p3, "noti_voice_error_group"
+
+    .line 12
+    invoke-virtual {p2, p3}, Landroidx/core/app/NotificationCompat$e;->Z(Ljava/lang/String;)Landroidx/core/app/NotificationCompat$e;
+
+    move-result-object p2
+
+    .line 13
+    invoke-virtual {p2}, Landroidx/core/app/NotificationCompat$e;->h()Landroid/app/Notification;
+
+    move-result-object p2
+
+    const-string v5, "Builder(context, notiCha\u2026\n                .build()"
+
+    invoke-static {p2, v5}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 14
+    new-instance v5, Landroid/app/NotificationChannel;
+
+    const/4 v6, 0x4
+
+    const-string/jumbo v7, "\uc74c\uc131 \uc694\uccad \uc5d0\ub7ec"
+
+    invoke-direct {v5, v4, v7, v6}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+
+    const-string/jumbo v6, "\uae38\uc548\ub0b4 \uc74c\uc131 \uc694\uccad\uc5d0 \ub300\ud55c \uc5d0\ub7ec \ud45c\uae30"
+
+    .line 15
+    invoke-virtual {v5, v6}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
+
+    const/4 v6, 0x0
+
+    .line 16
+    invoke-virtual {v5, v6}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
+
+    .line 17
+    invoke-virtual {v2, v5}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+
+    long-to-int v0, v0
+
+    .line 18
+    invoke-virtual {v2, v0, p2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+
+    const/16 p2, 0x4650
+
+    .line 19
+    new-instance v0, Landroidx/core/app/NotificationCompat$e;
+
+    invoke-direct {v0, p1, v4}, Landroidx/core/app/NotificationCompat$e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const p1, 0x7f080764
+
+    .line 20
+    iget-object v1, v0, Landroidx/core/app/NotificationCompat$e;->U:Landroid/app/Notification;
+
+    iput p1, v1, Landroid/app/Notification;->icon:I
+
+    const/16 p1, 0x10
+
+    .line 21
+    invoke-virtual {v0, p1, v3}, Landroidx/core/app/NotificationCompat$e;->W(IZ)V
+
+    .line 22
+    iput-object p3, v0, Landroidx/core/app/NotificationCompat$e;->x:Ljava/lang/String;
+
+    .line 23
+    iput-boolean v3, v0, Landroidx/core/app/NotificationCompat$e;->y:Z
+
+    .line 24
+    invoke-virtual {v0}, Landroidx/core/app/NotificationCompat$e;->h()Landroid/app/Notification;
+
+    move-result-object p1
+
+    .line 25
+    invoke-virtual {v2, p2, p1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+
+    return-void
+.end method
+
+.method public final f(Landroid/content/Context;I[Ljava/lang/String;Lae/c$a;)V
+    .locals 17
+    .param p1    # Landroid/content/Context;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # [Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p4    # Lae/c$a;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p3
+
+    move-object/from16 v3, p4
+
+    const-string v4, "context"
+
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v4, "wordList"
+
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p2, :cond_e
+
+    .line 1
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    .line 2
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v6, -0x1
+
+    .line 3
+    array-length v7, v2
+
+    const-string v8, ""
+
+    move-object v10, v8
+
+    const/4 v11, 0x0
+
+    :goto_0
+    if-ge v11, v7, :cond_a
+
+    aget-object v12, v2, v11
+
+    const-string/jumbo v13, "\uc774\uc5b4\uc11c"
+
+    .line 4
+    invoke-static {v12, v13}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_0
+
+    move v6, v11
+
+    .line 5
+    :cond_0
+    iget-object v13, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v13, v12}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    const/16 v14, 0x2c
+
+    if-eqz v13, :cond_8
+
+    iget-object v13, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v13, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v13
+
+    if-eqz v13, :cond_8
+
+    .line 6
+    new-instance v13, Ljava/io/ByteArrayInputStream;
+
+    iget-object v15, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v15, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, [B
+
+    invoke-direct {v13, v15}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    .line 7
+    invoke-virtual {v13}, Ljava/io/InputStream;->available()I
+
+    move-result v15
+
+    if-lez v15, :cond_7
+
+    .line 8
+    invoke-virtual {v13}, Ljava/io/InputStream;->reset()V
+
+    const-string/jumbo v14, "\uc9c4\uc785\uc785\ub2c8\ub2e4."
+
+    .line 9
+    invoke-static {v12, v14}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v14
+
+    const/4 v15, 0x0
+
+    if-nez v14, :cond_1
+
+    const-string/jumbo v14, "\ubc29\uba74"
+
+    invoke-static {v12, v14}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_4
+
+    :cond_1
+    if-lez v11, :cond_4
+
+    .line 10
+    iget-object v14, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    add-int/lit8 v16, v11, -0x1
+
+    aget-object v9, v2, v16
+
+    invoke-virtual {v14, v9}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    aget-object v9, v2, v16
+
+    const-string v14, "<sk_poi>"
+
+    move/from16 v16, v7
+
+    const/4 v1, 0x0
+
+    const/4 v7, 0x2
+
+    invoke-static {v9, v14, v1, v7, v15}, Lkotlin/text/StringsKt__StringsKt;->W2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9
+
+    .line 11
+    invoke-static {v13}, Lkotlin/io/a;->p(Ljava/io/InputStream;)[B
+
+    move-result-object v1
+
+    .line 12
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v9, 0x7c
+
+    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    if-gez v6, :cond_2
+
+    .line 13
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 14
+    :cond_2
+    invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_3
+    move/from16 v16, v7
+
+    goto/16 :goto_3
+
+    :cond_4
+    move/from16 v16, v7
+
+    if-gez v6, :cond_6
+
+    const-string v1, "idw_tbt_noti_vms"
+
+    const/4 v7, 0x2
+
+    const/4 v9, 0x0
+
+    .line 15
+    invoke-static {v12, v1, v9, v7, v15}, Lkotlin/text/StringsKt__StringsKt;->W2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 16
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v7, 0x7c
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 17
+    invoke-static {v13}, Lkotlin/io/a;->p(Ljava/io/InputStream;)[B
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move-object v10, v1
+
+    goto :goto_3
+
+    :cond_5
+    const/16 v7, 0x7c
+
+    .line 18
+    invoke-static {v13}, Lkotlin/io/a;->p(Ljava/io/InputStream;)[B
+
+    move-result-object v1
+
+    .line 19
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 20
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_6
+    const/16 v7, 0x7c
+
+    .line 21
+    invoke-static {v13}, Lkotlin/io/a;->p(Ljava/io/InputStream;)[B
+
+    move-result-object v1
+
+    .line 22
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 23
+    invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_1
+    move-object v10, v7
+
+    goto :goto_3
+
+    :cond_7
+    move/from16 v16, v7
+
+    .line 24
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_8
+    move/from16 v16, v7
+
+    .line 25
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_2
+    move-object v8, v1
+
+    :cond_9
+    :goto_3
+    add-int/lit8 v11, v11, 0x1
+
+    move-object/from16 v1, p1
+
+    move/from16 v7, v16
+
+    goto/16 :goto_0
+
+    :cond_a
+    if-lez v6, :cond_c
+
+    .line 26
+    iget-object v1, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    add-int/lit8 v6, v6, -0x1
+
+    aget-object v6, v2, v6
+
+    invoke-virtual {v1, v6}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
+    const/4 v1, 0x0
+
+    .line 27
+    iput-boolean v1, v0, Lae/c;->c:Z
+
+    goto :goto_4
+
+    .line 28
+    :cond_b
+    iget-object v1, v0, Lae/c;->b:Ljava/util/HashMap;
+
+    array-length v6, v2
+
+    add-int/lit8 v6, v6, -0x1
+
+    aget-object v2, v2, v6
+
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    .line 29
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    :cond_c
+    :goto_4
+    if-eqz v3, :cond_e
+
+    .line 30
+    iget-boolean v1, v0, Lae/c;->c:Z
+
+    if-eqz v1, :cond_d
+
+    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    if-eqz v1, :cond_d
+
+    move-object/from16 v1, p1
+
+    .line 31
+    invoke-interface {v3, v1, v4, v10, v8}, Lae/c$a;->onResponseComplete(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_5
+
+    .line 32
+    :cond_d
+    invoke-interface/range {p4 .. p4}, Lae/c$a;->onResponseFail()V
+
+    :cond_e
+    :goto_5
+    return-void
+.end method
+
+.method public final g(Landroid/content/Context;Ljava/lang/String;Lae/c$a;)V
+    .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Lae/c$a;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "alarmWord"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    sget-object v0, Lae/b;->j:Lae/b$a;
+
+    invoke-virtual {v0, p1}, Lae/b$a;->a(Landroid/content/Context;)Lae/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lae/b;->c(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-interface {v1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 4
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+
+    iget-object v2, p0, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v2, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [B
+
+    invoke-direct {v1, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    .line 5
+    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    .line 6
+    invoke-virtual {v1}, Ljava/io/InputStream;->reset()V
+
+    .line 7
+    invoke-static {v1}, Lkotlin/io/a;->p(Ljava/io/InputStream;)[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    if-eqz p3, :cond_0
+
+    const-string v1, ""
+
+    .line 8
+    invoke-interface {p3, p1, v0, p2, v1}, Lae/c$a;->onResponseComplete(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;ZLae/c$a;)Z
+    .locals 20
+    .param p1    # Landroid/content/Context;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # [Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p5    # Lae/c$a;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    move-object/from16 v9, p0
+
+    move-object/from16 v10, p1
+
+    move-object/from16 v11, p2
+
+    move-object/from16 v12, p3
+
+    const-string v0, "context"
+
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "voiceType"
+
+    invoke-static {v11, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo v0, "wordList"
+
+    invoke-static {v12, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "<skml voice=\""
+
+    const-string v1, "\">"
+
+    .line 1
+    invoke-static {v0, v11, v1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2
+    array-length v1, v12
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    move v4, v3
+
+    :goto_0
+    const-string v13, "<alarm>"
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x2
+
+    if-ge v3, v1, :cond_2
+
+    aget-object v7, v12, v3
+
+    .line 3
+    invoke-static {v7, v13, v2, v6, v5}, Lkotlin/text/StringsKt__StringsKt;->W2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    goto :goto_1
+
+    .line 4
+    :cond_0
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v8, "<sk_poi>"
+
+    .line 5
+    invoke-static {v7, v8, v2, v6, v5}, Lkotlin/text/StringsKt__StringsKt;->W2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    const/16 v5, 0x20
+
+    .line 6
+    invoke-static {v7, v5}, Landroidx/camera/core/impl/utils/h;->a(Ljava/lang/String;C)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 7
+    :cond_1
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    add-int/lit8 v4, v4, 0x1
+
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "</skml>"
+
+    .line 8
+    invoke-static {v0, v1}, Le/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    if-lez v4, :cond_3
+
+    .line 9
+    iget-object v0, v9, Lae/c;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "requestTts  headerFullString : "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/o1;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    new-instance v0, Lcom/skt/tmap/log/s;
+
+    invoke-direct {v0, v14, v4}, Lcom/skt/tmap/log/s;-><init>(Ljava/lang/String;I)V
+
+    .line 11
+    invoke-static {}, Lcom/skt/tmap/log/o;->a()Lcom/skt/tmap/log/o;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/log/o;->d(Lcom/skt/tmap/log/GoldenEyeLogInterface;)V
+
+    .line 12
+    :cond_3
+    new-instance v15, Lkotlin/jvm/internal/Ref$IntRef;
+
+    invoke-direct {v15}, Lkotlin/jvm/internal/Ref$IntRef;-><init>()V
+
+    array-length v0, v12
+
+    iput v0, v15, Lkotlin/jvm/internal/Ref$IntRef;->element:I
+
+    .line 13
+    array-length v8, v12
+
+    move v7, v2
+
+    :goto_2
+    if-ge v7, v8, :cond_6
+
+    aget-object v3, v12, v7
+
+    .line 14
+    invoke-static {v3, v13, v2, v6, v5}, Lkotlin/text/StringsKt__StringsKt;->W2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 15
+    sget-object v0, Lae/b;->j:Lae/b$a;
+
+    invoke-virtual {v0, v10}, Lae/b$a;->a(Landroid/content/Context;)Lae/b;
+
+    move-result-object v0
+
+    new-instance v1, Lkotlin/text/Regex;
+
+    const-string v2, "<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>"
+
+    invoke-direct {v1, v2}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v3, v2}, Lkotlin/text/Regex;->replace(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lae/b;->c(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    .line 16
+    iget v1, v15, Lkotlin/jvm/internal/Ref$IntRef;->element:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, v15, Lkotlin/jvm/internal/Ref$IntRef;->element:I
+
+    .line 17
+    iget-object v1, v9, Lae/c;->b:Ljava/util/HashMap;
+
+    invoke-interface {v1, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    iget v0, v15, Lkotlin/jvm/internal/Ref$IntRef;->element:I
+
+    move-object/from16 v5, p5
+
+    invoke-virtual {v9, v10, v0, v12, v5}, Lae/c;->f(Landroid/content/Context;I[Ljava/lang/String;Lae/c$a;)V
+
+    move/from16 v16, v7
+
+    move/from16 v19, v8
+
+    goto/16 :goto_4
+
+    :cond_4
+    move-object/from16 v5, p5
+
+    .line 19
+    sget-object v0, Lae/b;->j:Lae/b$a;
+
+    invoke-virtual {v0, v10}, Lae/b$a;->a(Landroid/content/Context;)Lae/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lae/b;->i()Z
+
+    move-result v1
+
+    const-string/jumbo v2, "this as java.lang.String).getBytes(charset)"
+
+    const-string v4, "Full-Sentence"
+
+    const-string v5, "application/octet-stream"
+
+    move/from16 v16, v7
+
+    const-string v7, "Accept"
+
+    if-eqz v1, :cond_5
+
+    new-array v1, v6, [Lkotlin/Pair;
+
+    .line 20
+    new-instance v6, Lkotlin/Pair;
+
+    invoke-direct {v6, v7, v5}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 v5, 0x0
+
+    aput-object v6, v1, v5
+
+    .line 21
+    sget-object v5, Lkotlin/text/d;->b:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v14, v5}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v5
+
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {v5, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 22
+    new-instance v5, Lkotlin/Pair;
+
+    invoke-direct {v5, v4, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 v2, 0x1
+
+    aput-object v5, v1, v2
+
+    .line 23
+    invoke-static {v1}, Lkotlin/collections/v0;->W([Lkotlin/Pair;)Ljava/util/Map;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    goto :goto_3
+
+    :cond_5
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Lkotlin/Pair;
+
+    .line 24
+    new-instance v6, Lkotlin/Pair;
+
+    invoke-direct {v6, v7, v5}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 v5, 0x0
+
+    aput-object v6, v1, v5
+
+    const-string v5, "public, only-if-cached, max-stale="
+
+    .line 25
+    invoke-static {v5}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    .line 26
+    invoke-virtual {v0, v10}, Lae/b$a;->a(Landroid/content/Context;)Lae/b;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 27
+    iget v6, v6, Lae/b;->c:I
+
+    .line 28
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 29
+    new-instance v6, Lkotlin/Pair;
+
+    const-string v7, "Cache-Control"
+
+    invoke-direct {v6, v7, v5}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 v5, 0x1
+
+    aput-object v6, v1, v5
+
+    .line 30
+    sget-object v5, Lkotlin/text/d;->b:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v14, v5}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v5
+
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {v5, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 31
+    new-instance v6, Lkotlin/Pair;
+
+    invoke-direct {v6, v4, v5}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    aput-object v6, v1, v2
+
+    .line 32
+    invoke-static {v1}, Lkotlin/collections/v0;->W([Lkotlin/Pair;)Ljava/util/Map;
+
+    move-result-object v1
+
+    :goto_3
+    move/from16 v17, v2
+
+    .line 33
+    invoke-virtual {v0, v10}, Lae/b$a;->a(Landroid/content/Context;)Lae/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v11, v3, v1}, Lae/b;->k(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lretrofit2/Call;
+
+    move-result-object v7
+
+    .line 34
+    new-instance v18, Lkotlin/jvm/internal/Ref$IntRef;
+
+    invoke-direct/range {v18 .. v18}, Lkotlin/jvm/internal/Ref$IntRef;-><init>()V
+
+    .line 35
+    new-instance v6, Lae/c$b;
+
+    move-object v0, v6
+
+    move-object v1, v15
+
+    move-object/from16 v2, p0
+
+    move-object/from16 v4, p1
+
+    move-object/from16 v5, p3
+
+    move-object v9, v6
+
+    move-object/from16 v6, p5
+
+    move-object v10, v7
+
+    move/from16 v7, p4
+
+    move/from16 v19, v8
+
+    move-object/from16 v8, v18
+
+    invoke-direct/range {v0 .. v8}, Lae/c$b;-><init>(Lkotlin/jvm/internal/Ref$IntRef;Lae/c;Ljava/lang/String;Landroid/content/Context;[Ljava/lang/String;Lae/c$a;ZLkotlin/jvm/internal/Ref$IntRef;)V
+
+    invoke-interface {v10, v9}, Lretrofit2/Call;->enqueue(Lretrofit2/Callback;)V
+
+    move/from16 v6, v17
+
+    :goto_4
+    add-int/lit8 v7, v16, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v5, 0x0
+
+    move-object/from16 v9, p0
+
+    move-object/from16 v10, p1
+
+    move/from16 v8, v19
+
+    goto/16 :goto_2
+
+    :cond_6
+    const/4 v0, 0x1
+
+    return v0
+.end method

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:layout="@layout/lab_menu_description_view_layout" />
+    <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_setting_traffic_signal" android:key="@string/use_traffic_light_Yn" android:defaultValue="N" app:isDetailTextVisible="true" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false" app:subTitle="@string/tmap_setting_traffic_signal_desc">
+        <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapTrafficLightPreviewActivity" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_setting_bluetooth_auto_start" android:key="@string/use_bluetooth_auto_start_Yn" android:defaultValue="N" app:groupName="@string/user_settings_info" app:isDetailTextVisible="true" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="true" app:subTitle="@string/tmap_setting_bluetooth_auto_start_desc">
+        <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapBluetoothAutoStartPreviewActivity" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference>
+    <com.skt.tmap.setting.fragment.customLayout.SettingAutoStartPreference android:layout="@layout/setting_auto_start" android:key="@string/feature_auto_start_setting" android:defaultValue="@string/feature_auto_start_setting" />
+    <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_setting_copy_destination" android:key="@string/use_copy_destination_Yn" android:defaultValue="N" app:groupName="@string/user_settings_info" app:isDetailTextVisible="true" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="true" app:subTitle="@string/tmap_setting_copy_destination_desc">
+        <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapCopyDestinationPreviewActivity" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference>
+</PreferenceScreen>

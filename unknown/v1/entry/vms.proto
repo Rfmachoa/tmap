@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+
+message VmsEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** VMS 정보 */
+  repeated VmsElement elements = 2;
+}
+
+message VmsElement {
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** VMS ID */
+  int32 vmsId = 2;
+
+}

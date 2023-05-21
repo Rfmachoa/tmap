@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/near_toolbar_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/tool_bar_container" android:tag="binding_1" android:background="@color/tmap_common_title_bg_color" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_56dp">
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/black_color" android:gravity="center" android:id="@id/title" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_3dp" android:layout_centerVertical="true" android:fontFamily="@font/skp_go_bm" />
+        <ImageView android:id="@id/near_back_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_near_back" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <View android:background="@drawable/near_title_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" />
+</LinearLayout>

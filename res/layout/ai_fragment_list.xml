@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ai_gradient_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/close_button" android:background="@android:color/transparent" android:layout_width="@dimen/tmap_45dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_btn_close_selector" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_25dp" android:layout_marginRight="@dimen/tmap_25dp">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ai_list_top_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_48dp">
+                <ImageView android:id="@id/ai_list_top_slide_image" android:background="@drawable/btn_arrow_slide_up" android:visibility="gone" android:layout_width="@dimen/tmap_115dp" android:layout_height="@dimen/tmap_45dp" />
+            </LinearLayout>
+            <ListView android:id="@id/ai_list" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0dp" android:divider="@drawable/ai_list_divider" android:dividerHeight="@dimen/tmap_1dp" android:layout_weight="1.0" android:splitMotionEvents="false" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ai_list_lottie_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_78dp">
+                <com.airbnb.lottie.LottieAnimationView android:id="@id/ai_lottie_view" android:layout_width="@dimen/tmap_155dp" android:layout_height="@dimen/tmap_60dp" android:layout_marginTop="@dimen/tmap_7dp" app:lottie_fileName="tts.json" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

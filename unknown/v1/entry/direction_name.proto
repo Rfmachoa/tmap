@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message DirectionNameEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x03
+  int32 infoIndexType = 1;
+
+  /** 방면명칭 제공 타입
+   * 0x01 : 텍스트
+   * 0x02 : 음성(EVRC)
+   * 0x03 : 텍스트 + 음성
+   */
+  int32 directionNameType = 2;
+
+  /** 방면명칭 데이터 Collection */
+  repeated DirectionNameElement elements = 3;
+}
+
+message DirectionNameElement {
+
+  /** 해당 마지막 보간점 Idx */
+  int32 lastVertexIndex = 1;
+
+  /** 방면명칭구분코드
+   * 1:교차로명칭(wav가능)
+   * 2:방면명칭(wav가능)
+   * 3:서버가공교차로/방면명칭
+   * 4:목적지명칭
+   */
+  int32 dirNameDivFlag = 2;
+
+  /** 방면명칭 텍스트데이타(NULL포함)
+   * 안내점의 방면명칭제공과 고속도로진출 안내점 진입전 500m지점 한칸 SPACE 제공과
+   * 일반도로 안내점 교차로 진입전 300m 지점 한칸 SPACE 제공하면 가까운 교차로 명칭 표출
+   *
+   * 구분자(’/’)로 근거리/중거리/원거리방면 명칭 제공
+   * (중거리, 원거리명칭이 없는 경우에 한칸 SPACE제공)
+   * 예) 강남역/_ /_
+   * <예외> 방면명칭이 없어서 교차로명칭이 대신 들어간 경우에는 구분자 (‘/’)없음,
+   * 모든 명칭은  ‘방면’을 붙이지  않는다
+   */
+  string dirName = 3;
+}

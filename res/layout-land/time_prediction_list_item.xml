@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/tmap_57dp" android:minHeight="@dimen/tmap_57dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <RelativeLayout android:id="@id/frontZone" android:layout_width="@dimen/tmap_130dp" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/dateZone" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_4b5054" android:gravity="center_horizontal" android:id="@id/dateTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11월20일" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_b1b1b1" android:gravity="center_horizontal" android:id="@id/weekTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_5dp" android:text="수요일" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/timeZone" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/tmap_29dp" android:textColor="@color/color_4b5054" android:id="@id/timeTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/tmap_10dp" android:textColor="@color/color_b1b1b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_after_time" android:includeFontPadding="false" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/realZone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/requiredTimeZone" android:layout_width="@dimen/tmap_105dp" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_e84e36" android:id="@id/requiredTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12시간 30분" android:includeFontPadding="false" />
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_4b5054" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_time_need" android:includeFontPadding="false" />
+            </LinearLayout>
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="@dimen/tmap_185dp" android:layout_height="wrap_content" android:layout_toRightOf="@id/requiredTimeZone" android:layout_alignParentTop="true">
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_b1b1b1" android:id="@id/startTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 12:20" android:includeFontPadding="false" />
+                <ImageView android:id="@id/arrowImage" android:layout_width="@dimen/tmap_15dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_8dp" android:src="@drawable/calendar_poi_arrow_selector" />
+                <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_b1b1b1" android:id="@id/arriveTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_8dp" android:text="오후 12:50" android:includeFontPadding="false" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

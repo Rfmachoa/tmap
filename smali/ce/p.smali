@@ -1,0 +1,36 @@
+.class public final synthetic Lce/p;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/core/util/d;
+
+
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/blackbox/d;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/skt/tmap/blackbox/d;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lce/p;->a:Lcom/skt/tmap/blackbox/d;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lce/p;->a:Lcom/skt/tmap/blackbox/d;
+
+    check-cast p1, Landroidx/camera/video/VideoRecordEvent;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/blackbox/d;->c(Lcom/skt/tmap/blackbox/d;Landroidx/camera/video/VideoRecordEvent;)V
+
+    return-void
+.end method

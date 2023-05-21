@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message FacilityNameEntry {
+
+  /** 정보 인덱스 type */
+  // default =  0x03
+  int32 infoIndexType = 1;
+
+  /** 시설물명칭 데이터 Collection */
+  repeated FacilityNameElement elements = 2;
+
+}
+
+
+message FacilityNameElement {
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+  /** 종료 보간점 Idx */
+  int32 destVtxIndex = 2;
+
+  /** 시설물 명칭 (NULL포함) */
+  string name = 3;
+}

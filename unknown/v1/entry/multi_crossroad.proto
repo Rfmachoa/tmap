@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message MultiCrossroadEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 복잡교차로 제공 타입 */
+  int32 multiCrossroadType = 2;
+
+  /** 해상도 */
+  int32 resolutionWidth = 3;
+
+  /** 해상도 */
+  int32 resolutionHeight = 4;
+
+  /** 복잡교차로 데이터 Collection */
+  repeated MultiCrossroadElement elements = 5;
+
+  /** 복잡교차로 이미지 공통 URL */
+  string mainDomainUrl = 6;
+
+}
+
+message MultiCrossroadElement {
+
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 복잡교차로 음성 코드 */
+  int32 multiCrossroadVoiceCode = 2;
+
+  /** 이미지 존재 여부(0:없다, 1:있다) */
+  int32 imageFlag = 3;
+
+
+  /** 복잡교차로 이미지 ID */
+  int32 multiCrossroadImageId = 4;
+
+  /** 이미지 URI(NULL포함) */
+  string dayUri = 5;
+
+  /** 이미지 URI(NULL포함) */
+  string nightUri = 6;
+
+}

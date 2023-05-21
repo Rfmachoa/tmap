@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message GuidePointEntry {
+
+  // 정보인덱스 Type
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 안내점 데이터 Collection */
+  repeated GuidePointElement elements = 2;
+
+}
+
+message GuidePointElement {
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 안내코드 (코드테이블 참조 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/139926141) */
+  int32 guideType = 2;
+
+  /** 연속회전안내Flag ( 0 : 연속안내 해당 없음, 1 : 고속주행, 2 : 일반주행) */
+  int32 continueTurnFlag = 3;
+}

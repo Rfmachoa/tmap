@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message VertexInTileEntry {
+
+  // 정보인덱스 Type.
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  // 보간점 데이터 Collection.
+  repeated VertexInTileElement elements = 2;
+
+}
+
+message VertexInTileElement {
+
+  /** 타일내 X좌표. */
+  int32 tileXPos = 1;
+
+  /** 타일내 Y좌표. */
+  int32 tileYPos = 2;
+
+  /** v(a)~v(a+1)까지의 소요거리. */
+  int32 spentDistance = 3;
+
+  /** v(a)~v(a+1)까지의 소요시간. */
+  int32 spentTime = 4;
+
+  /** WGS84 절대 X좌표. */
+  double wgs84Xpos = 5;
+
+  /** WGS84 절대 Y좌표. */
+  double wgs84Ypos = 6;
+
+  /** v(0)부터 누적 거리 */
+  int32  accumulateDistance = 7;
+
+  /** v(0)부터 누적 시간 */
+  int32  accumulateTime = 8;
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/map_route_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/mapView" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/map_button" layout="@layout/map_button_layout" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/route_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:orientation="vertical" android:id="@id/bottom_sheet_callout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:behavior_fitToContents="true" app:behavior_hideable="true" app:behavior_peekHeight="153.0dip" app:layout_behavior="com.skt.tmap.view.TmapBottomSheetBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

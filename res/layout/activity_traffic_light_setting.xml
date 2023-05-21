@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
+    <androidx.core.widget.NestedScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/view_space" android:background="@color/color_f8f9fa" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_8dp" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/traffic_light_setting_imageview" android:layout_width="@dimen/tmap_280dp" android:layout_height="@dimen/tmap_195dp" android:layout_marginTop="@dimen/tmap_32dp" android:src="@drawable/img_traffic_signal" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_8c9299" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_20dp" android:layout_marginBottom="@dimen/tmap_32dp" android:text="@string/activity_traffic_light_setting_desc" android:fontFamily="@font/tmobi300" android:textAlignment="center" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

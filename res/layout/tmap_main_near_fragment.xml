@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/tmap_main_near_fragment_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tmap_10dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/black_color" android:id="@id/near_grid_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:text="@string/tmap_near_search_title" android:fontFamily="@font/skp_go_bm" />
+        <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:ellipsize="marquee" android:tag="binding_1" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/near_grid_view" android:background="@color/color_ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_10dp" android:layout_marginTop="@dimen/tmap_30dp" android:layout_marginRight="@dimen/tmap_10dp" android:nestedScrollingEnabled="false" />
+    <ImageView android:id="@id/ad_image" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_near_fragment_ad_image_height" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginTop="@dimen/tmap_10dp" android:layout_marginRight="@dimen/tmap_20dp" android:scaleType="fitCenter" />
+</LinearLayout>

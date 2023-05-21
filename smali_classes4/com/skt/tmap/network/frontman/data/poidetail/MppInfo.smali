@@ -1,0 +1,902 @@
+.class public final Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+.super Ljava/lang/Object;
+.source "MppInfo.kt"
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
+
+.annotation build Landroidx/compose/runtime/internal/StabilityInferred;
+    parameters = 0x0
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# instance fields
+.field private final displayOrder:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "displayOrder"
+    .end annotation
+.end field
+
+.field private final entranceNumber:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "entranceNumber"
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field private final isMain:Z
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "isMain"
+    .end annotation
+.end field
+
+.field private final navX:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "navX"
+    .end annotation
+.end field
+
+.field private final navY:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "navY"
+    .end annotation
+.end field
+
+.field private final pkey:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "pkey"
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field private final rpFlag:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "rpFlag"
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field private final rpFlagNum:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "rpFlagNum"
+    .end annotation
+.end field
+
+.field private final wgs84NavX:D
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "wgs84NavX"
+    .end annotation
+.end field
+
+.field private final wgs84NavY:D
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "wgs84NavY"
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;ZIILjava/lang/String;Ljava/lang/String;IDD)V
+    .locals 7
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p7    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    move-object v0, p0
+
+    const-string v2, "entranceNumber"
+
+    const-string v4, "pkey"
+
+    const-string v6, "rpFlag"
+
+    move-object v1, p2
+
+    move-object v3, p6
+
+    move-object v5, p7
+
+    .line 1
+    invoke-static/range {v1 .. v6}, Ll9/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    move v1, p1
+
+    .line 3
+    iput v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    move-object v1, p2
+
+    .line 4
+    iput-object v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    move v1, p3
+
+    .line 5
+    iput-boolean v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    move v1, p4
+
+    .line 6
+    iput v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    move v1, p5
+
+    .line 7
+    iput v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    move-object v1, p6
+
+    .line 8
+    iput-object v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    move-object v1, p7
+
+    .line 9
+    iput-object v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    move v1, p8
+
+    .line 10
+    iput v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    move-wide/from16 v1, p9
+
+    .line 11
+    iput-wide v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    move-wide/from16 v1, p11
+
+    .line 12
+    iput-wide v1, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    return-void
+.end method
+
+.method public static synthetic copy$default(Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;ILjava/lang/String;ZIILjava/lang/String;Ljava/lang/String;IDDILjava/lang/Object;)Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+    .locals 14
+
+    move-object v0, p0
+
+    move/from16 v1, p13
+
+    and-int/lit8 v2, v1, 0x1
+
+    if-eqz v2, :cond_0
+
+    iget v2, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    goto :goto_0
+
+    :cond_0
+    move v2, p1
+
+    :goto_0
+    and-int/lit8 v3, v1, 0x2
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 v3, p2
+
+    :goto_1
+    and-int/lit8 v4, v1, 0x4
+
+    if-eqz v4, :cond_2
+
+    iget-boolean v4, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    goto :goto_2
+
+    :cond_2
+    move/from16 v4, p3
+
+    :goto_2
+    and-int/lit8 v5, v1, 0x8
+
+    if-eqz v5, :cond_3
+
+    iget v5, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    goto :goto_3
+
+    :cond_3
+    move/from16 v5, p4
+
+    :goto_3
+    and-int/lit8 v6, v1, 0x10
+
+    if-eqz v6, :cond_4
+
+    iget v6, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    goto :goto_4
+
+    :cond_4
+    move/from16 v6, p5
+
+    :goto_4
+    and-int/lit8 v7, v1, 0x20
+
+    if-eqz v7, :cond_5
+
+    iget-object v7, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    goto :goto_5
+
+    :cond_5
+    move-object/from16 v7, p6
+
+    :goto_5
+    and-int/lit8 v8, v1, 0x40
+
+    if-eqz v8, :cond_6
+
+    iget-object v8, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    goto :goto_6
+
+    :cond_6
+    move-object/from16 v8, p7
+
+    :goto_6
+    and-int/lit16 v9, v1, 0x80
+
+    if-eqz v9, :cond_7
+
+    iget v9, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    goto :goto_7
+
+    :cond_7
+    move/from16 v9, p8
+
+    :goto_7
+    and-int/lit16 v10, v1, 0x100
+
+    if-eqz v10, :cond_8
+
+    iget-wide v10, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    goto :goto_8
+
+    :cond_8
+    move-wide/from16 v10, p9
+
+    :goto_8
+    and-int/lit16 v1, v1, 0x200
+
+    if-eqz v1, :cond_9
+
+    iget-wide v12, v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    goto :goto_9
+
+    :cond_9
+    move-wide/from16 v12, p11
+
+    :goto_9
+    move p1, v2
+
+    move-object/from16 p2, v3
+
+    move/from16 p3, v4
+
+    move/from16 p4, v5
+
+    move/from16 p5, v6
+
+    move-object/from16 p6, v7
+
+    move-object/from16 p7, v8
+
+    move/from16 p8, v9
+
+    move-wide/from16 p9, v10
+
+    move-wide/from16 p11, v12
+
+    invoke-virtual/range {p0 .. p12}, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->copy(ILjava/lang/String;ZIILjava/lang/String;Ljava/lang/String;IDD)Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final component1()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    return v0
+.end method
+
+.method public final component10()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    return-wide v0
+.end method
+
+.method public final component2()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component3()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    return v0
+.end method
+
+.method public final component4()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    return v0
+.end method
+
+.method public final component5()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    return v0
+.end method
+
+.method public final component6()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component7()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final component8()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    return v0
+.end method
+
+.method public final component9()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    return-wide v0
+.end method
+
+.method public final copy(ILjava/lang/String;ZIILjava/lang/String;Ljava/lang/String;IDD)Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+    .locals 14
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p6    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p7    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "entranceNumber"
+
+    move-object/from16 v3, p2
+
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "pkey"
+
+    move-object/from16 v7, p6
+
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "rpFlag"
+
+    move-object/from16 v8, p7
+
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+
+    move-object v1, v0
+
+    move v2, p1
+
+    move/from16 v4, p3
+
+    move/from16 v5, p4
+
+    move/from16 v6, p5
+
+    move/from16 v9, p8
+
+    move-wide/from16 v10, p9
+
+    move-wide/from16 v12, p11
+
+    invoke-direct/range {v1 .. v13}, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;-><init>(ILjava/lang/String;ZIILjava/lang/String;Ljava/lang/String;IDD)V
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 7
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;
+
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    iget v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    iget-boolean v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    iget v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    iget v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    iget v3, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-wide v3, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    iget-wide v5, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    return v2
+
+    :cond_a
+    iget-wide v3, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    iget-wide v5, p1, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    return v2
+
+    :cond_b
+    return v0
+.end method
+
+.method public final getDisplayOrder()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    return v0
+.end method
+
+.method public final getEntranceNumber()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getNavX()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    return v0
+.end method
+
+.method public final getNavY()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    return v0
+.end method
+
+.method public final getPkey()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getRpFlag()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getRpFlagNum()I
+    .locals 1
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    return v0
+.end method
+
+.method public final getWgs84NavX()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    return-wide v0
+.end method
+
+.method public final getWgs84NavY()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    return-wide v0
+.end method
+
+.method public hashCode()I
+    .locals 4
+
+    iget v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    const/16 v2, 0x1f
+
+    .line 1
+    invoke-static {v1, v0, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
+
+    move-result v0
+
+    .line 2
+    iget-boolean v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    const/16 v2, 0x1f
+
+    .line 3
+    invoke-static {v1, v0, v2}, Lr1/a;->a(III)I
+
+    move-result v0
+
+    .line 4
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    .line 5
+    invoke-static {v1, v0, v2}, Lr1/a;->a(III)I
+
+    move-result v0
+
+    .line 6
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    .line 7
+    invoke-static {v1, v0, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
+
+    move-result v0
+
+    .line 8
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    .line 9
+    invoke-static {v1, v0, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
+
+    move-result v0
+
+    .line 10
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    .line 11
+    invoke-static {v1, v0, v2}, Lr1/a;->a(III)I
+
+    move-result v0
+
+    .line 12
+    iget-wide v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    const/16 v3, 0x1f
+
+    .line 13
+    invoke-static {v1, v2, v0, v3}, Lcom/naver/gfpsdk/internal/image/a;->a(DII)I
+
+    move-result v0
+
+    .line 14
+    iget-wide v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final isMain()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "MppInfo(displayOrder="
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 2
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->displayOrder:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", entranceNumber="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->entranceNumber:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMain="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->isMain:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", navX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navX:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", navY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->navY:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pkey="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->pkey:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", rpFlag="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlag:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", rpFlagNum="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->rpFlagNum:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", wgs84NavX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavX:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", wgs84NavY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/skt/tmap/network/frontman/data/poidetail/MppInfo;->wgs84NavY:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

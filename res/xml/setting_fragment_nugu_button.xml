@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference app:isTextViewDivider="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/txt_setting_ai_button_use" android:key="@string/use_bluetooth_button" android:defaultValue="false" app:clickLogActionId="tap.nugubutton_onoff" app:groupName="@string/tmap_ai" app:isTextViewDivider="false" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/txt_setting_ai_button_start_use" android:key="@string/use_bluetooth_service_on_background" android:defaultValue="true" app:clickLogActionId="tap.nugubutton_tmap" app:groupName="@string/tmap_ai" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+</PreferenceScreen>

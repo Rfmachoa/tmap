@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:tag="layout/map_setting_dialog_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:tag="binding_1" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bottom_sheet_dialog_background" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_34dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginRight="@dimen/tmap_20dp">
+                <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:id="@id/bottom_menu_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tmap_1dp" android:text="@string/map_info_map_type_txt" android:layout_centerVertical="true" android:fontFamily="@font/skp_go_bm" />
+                <LinearLayout android:gravity="center" android:tag="binding_3" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                    <ImageView android:duplicateParentState="true" android:layout_width="@dimen/tmap_34dp" android:layout_height="@dimen/tmap_34dp" android:layout_marginRight="@dimen/tmap_m1dp" android:src="@drawable/ic_btn_check_selector" android:layout_toLeftOf="@id/map_3d_building_text" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:id="@id/map_3d_building_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map_info_building_txt" android:layout_centerVertical="true" android:fontFamily="@font/skp_go_bm" />
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_normal_map_image_selector" android:padding="@dimen/tmap_1dp" android:duplicateParentState="true" android:layout_width="@dimen/tmap_124dp" android:layout_height="@dimen/tmap_80dp" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_6" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_10dp" android:text="@string/map_info_normal_map_txt" />
+                </LinearLayout>
+                <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_aerial_map_image_selector" android:padding="@dimen/tmap_1dp" android:duplicateParentState="true" android:layout_width="@dimen/tmap_124dp" android:layout_height="@dimen/tmap_80dp" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_8" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_10dp" android:text="@string/map_info_satellite_map_txt" />
+                </LinearLayout>
+                <View android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:tag="binding_9" android:background="@color/color_efefef" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" />
+            <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:text="@string/map_info_setting_txt" android:fontFamily="@font/skp_go_bm" />
+            <LinearLayout android:orientation="horizontal" android:tag="binding_11" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_12" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_button_selector" android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/ic_btn_traffic_selector" android:scaleType="center" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_13" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_12dp" android:text="@string/map_info_traffic_info_txt" />
+                </LinearLayout>
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_14" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_button_selector" android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/ic_btn_cctv_selector" android:scaleType="center" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_15" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_12dp" android:text="@string/map_info_cctv_txt" />
+                </LinearLayout>
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_16" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_button_selector" android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/ic_btn_recent_selector" android:scaleType="center" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_17" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_12dp" android:text="@string/map_info_recent_des_txt" />
+                </LinearLayout>
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:tag="binding_18" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/map_setting_button_selector" android:duplicateParentState="true" android:layout_width="@dimen/tmap_60dp" android:layout_height="@dimen/tmap_60dp" android:src="@drawable/ic_btn_favorite_selector" android:scaleType="center" />
+                    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/map_setting_text_selector" android:tag="binding_19" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_12dp" android:text="@string/map_info_favorite_txt" />
+                </LinearLayout>
+                <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message CityBorderEntry {
+
+  /** 정보인덱스 Type(0x01) */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 시도경계정보 Data (n) 반복 */
+  repeated CityBorderElement elements = 2;
+}
+
+message CityBorderElement {
+
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 진출시도코드 */
+  int32 outCityCode = 2;
+
+  /** 진입시도코드 */
+  int32 intCityCode = 3;
+}

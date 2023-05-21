@@ -1,0 +1,385 @@
+.class public Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;
+.super Ljava/lang/Object;
+.source "TmapPopupDialogActivity.java"
+
+# interfaces
+.implements Lcom/skt/tmap/dialog/TmapBaseDialog$e;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/tid/TmapPopupDialogActivity;->j5(Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+.field public final synthetic b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+
+# direct methods
+.method public constructor <init>(Lcom/skt/tmap/tid/TmapPopupDialogActivity;Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$type"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    iput-object p2, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->a:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onLeftButtonClicked()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/tid/TmapPopupDialogActivity;->g5(Lcom/skt/tmap/tid/TmapPopupDialogActivity;)Lcom/skt/tmap/dialog/d0;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    .line 3
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/d0;
+
+    .line 4
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/d0;->c()V
+
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    const/4 v1, 0x0
+
+    .line 6
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/d0;
+
+    .line 7
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->a:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    sget-object v1, Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;->DIALOG_NEWVERSION:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    if-ne v0, v1, :cond_1
+
+    return-void
+
+    .line 8
+    :cond_1
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/util/f;->i(Landroid/app/Activity;)V
+
+    return-void
+.end method
+
+.method public onRightButtonClicked()V
+    .locals 10
+
+    const-string v0, "com.skt.skaf.A000Z00040"
+
+    .line 1
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v1}, Lcom/skt/tmap/tid/TmapPopupDialogActivity;->d5(Lcom/skt/tmap/tid/TmapPopupDialogActivity;)Lcom/skt/tmap/dialog/d0;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 2
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    .line 3
+    iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/d0;
+
+    .line 4
+    invoke-virtual {v1}, Lcom/skt/tmap/dialog/d0;->c()V
+
+    .line 5
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    const/4 v2, 0x0
+
+    .line 6
+    iput-object v2, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/d0;
+
+    .line 7
+    :cond_0
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->a:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    sget-object v2, Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;->DIALOG_FORCED_NEWVERSION:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    if-eq v1, v2, :cond_4
+
+    sget-object v2, Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;->DIALOG_NEWVERSION:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    if-ne v1, v2, :cond_1
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    sget-object v0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;->DIALOG_USER_INFO_CHANGED:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    if-ne v1, v0, :cond_2
+
+    .line 9
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
+
+    .line 10
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-class v2, Lcom/skt/tmap/service/LoginService;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "user_info_changed_confirm"
+
+    .line 11
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 12
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lcom/skt/tmap/service/LoginService;->u3(Landroid/content/Context;Landroid/content/Intent;)V
+
+    goto/16 :goto_2
+
+    .line 13
+    :cond_2
+    sget-object v0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;->DIALOG_UBI_FAIL:Lcom/skt/tmap/tid/TmapPopupDialogActivity$DialogType;
+
+    if-ne v1, v0, :cond_3
+
+    goto/16 :goto_2
+
+    .line 14
+    :cond_3
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/util/f;->i(Landroid/app/Activity;)V
+
+    goto/16 :goto_2
+
+    .line 15
+    :cond_4
+    :goto_0
+    invoke-static {}, Lcom/skt/tmap/util/h;->s()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    .line 16
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 17
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/f;->q0(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 18
+    :cond_5
+    :try_start_0
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v1
+
+    .line 19
+    iget-object v1, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/skt/tmap/util/p0;->d(Ljava/lang/String;)F
+
+    move-result v1
+
+    .line 20
+    iget-object v2, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    float-to-double v3, v1
+
+    const-wide v5, 0x4000666666666666L    # 2.05
+
+    cmpl-double v1, v3, v5
+
+    const-string v3, "A000Z00040"
+
+    const-string v4, "com.skt.skaf.COL.REQUESTER"
+
+    const-string v5, "com.skt.skaf.COL.URI"
+
+    const-string v6, "COLLAB_ACTION"
+
+    const-string v7, "com.skt.skaf.A000Z00040.A000Z00040"
+
+    const/high16 v8, 0x20000000
+
+    if-ltz v1, :cond_6
+
+    :try_start_1
+    const-string v1, "MULTI_DOWNLOAD/1/0000257761"
+
+    .line 21
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/0/0/DPXX/0/CTXX"
+
+    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 22
+    invoke-virtual {v2, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 23
+    invoke-virtual {v2, v0, v7}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 24
+    invoke-virtual {v2, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 25
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-virtual {v2, v5, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    .line 26
+    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 27
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v0, v2}, Lcom/skt/tmap/activity/BaseActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_1
+
+    .line 28
+    :cond_6
+    invoke-virtual {v2, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 29
+    invoke-virtual {v2, v0, v7}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 30
+    invoke-virtual {v2, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v0, "PRODUCT_VIEW/0000257761/0"
+
+    .line 31
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-virtual {v2, v5, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+
+    .line 32
+    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 33
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v0, v2}, Lcom/skt/tmap/activity/BaseActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+
+    .line 34
+    :catch_0
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "http://tsto.re/0000257761"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    const/high16 v1, 0x30000000
+
+    .line 35
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 36
+    iget-object v1, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/activity/BaseActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 37
+    :goto_1
+    iget-object v0, p0, Lcom/skt/tmap/tid/TmapPopupDialogActivity$a;->b:Lcom/skt/tmap/tid/TmapPopupDialogActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/util/f;->i(Landroid/app/Activity;)V
+
+    :goto_2
+    return-void
+.end method

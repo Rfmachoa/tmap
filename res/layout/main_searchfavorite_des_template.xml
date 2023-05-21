@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_sf_des_t_layout_list" android:background="@drawable/tmap_common_list_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/main_sf_des_t_layout_fovoritename" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/main_sf_des_t_icon_map_2" android:layout_width="@dimen/tmap_20dp" android:layout_height="@dimen/tmap_20dp" android:layout_marginLeft="@dimen/tmap_20dp" android:src="@drawable/ic_icon_grid_bookmark" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/main_sf_des_t_imageview_map_2" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/tmap_12dp" android:textColor="@drawable/search_result_list_detail_color" android:gravity="center" android:background="@drawable/search_result_list_detail_bg" android:duplicateParentState="true" android:layout_width="@dimen/tmap_42dp" android:layout_height="@dimen/tmap_27dp" android:layout_marginLeft="@dimen/tmap_15dp" android:layout_marginRight="@dimen/tmap_15dp" android:text="@string/txt_detail" android:fontFamily="@font/tmobi300" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/main_sf_des_name_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_13dp" android:layout_marginTop="@dimen/tmap_20dp" android:layout_marginBottom="@dimen/tmap_20dp" android:layout_toLeftOf="@id/main_sf_des_t_imageview_map_2" android:layout_toRightOf="@id/main_sf_des_t_icon_map_2" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:ellipsize="end" android:id="@id/main_sf_des_t_textview_favoritename" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@font/tmobi300" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:ellipsize="end" android:id="@id/main_sf_des_t_textview_favoriteaddr" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_7dp" android:singleLine="true" android:fontFamily="@font/tmobi300" />
+        </LinearLayout>
+        <ImageView android:background="@color/color_e6e6e6" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0.5dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

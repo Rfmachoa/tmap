@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/mci_graph" app:startDestination="@id/tmapMciCheckFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="TmapCheckMciFragment" android:name="com.skt.tmap.mvp.fragment.TmapMciCheckFragment" android:id="@id/tmapMciCheckFragment">
+        <action android:id="@id/action_tmapMciCheckFragment_to_tmapMciInfoFragment" app:destination="@id/tmapMciInfoFragment" />
+        <action android:id="@id/action_tmapMciCheckFragment_to_tmapMciOtpFragment" app:destination="@id/tmapMciOtpFragment" />
+    </fragment>
+    <fragment android:label="TmapMciInfoFragment" android:name="com.skt.tmap.mvp.fragment.TmapMciInfoFragment" android:id="@id/tmapMciInfoFragment">
+        <action android:id="@id/action_tmapMciInfoFragment_to_tmapMciOtpFragment" app:destination="@id/tmapMciOtpFragment" />
+        <action android:id="@id/action_tmapMciInfoFragment_to_tmapMciCheckFragment" app:destination="@id/tmapMciCheckFragment" />
+    </fragment>
+    <fragment android:label="TmapMciOtpFragment" android:name="com.skt.tmap.mvp.fragment.TmapMciOtpFragment" android:id="@id/tmapMciOtpFragment">
+        <action android:id="@id/action_tmapMciOtpFragment_to_tmapMciCheckFragment" app:destination="@id/tmapMciCheckFragment" />
+        <action android:id="@id/action_tmapMciOtpFragment_to_tmapMciInfoFragment" app:destination="@id/tmapMciInfoFragment" />
+    </fragment>
+</navigation>

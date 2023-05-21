@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message RoadEntry {
+
+  // 정보인덱스 Type
+  // default  = 0x03;
+  int32 infoIndexType = 1;
+
+  // 도로정보 데이터 Collection
+  repeated RoadElement elements = 2;
+}
+
+
+message RoadElement {
+  /** 해당 마지막 보간점 Idx */
+  int32 lastVertexIndex = 1;
+
+  /** 링크종별 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995903) */
+  int32 linkType = 2;
+
+  /** 도로종별 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995894) */
+  int32 roadType = 3;
+
+  /** 링크시설물 코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36995912) */
+  int32 facilityType = 4;
+
+  /** 3D 고도 속성 코드 (일반도로:0, 일반고가:1, 이중상판:5, 내부순환:7) */
+  int32 overpassCode = 5;
+
+  /** 도로길이(단위 m) */
+  int32 roadLength = 6;
+
+  /** 차선수(본선비분리이면 왕복차로수) */
+  int32 laneCount = 7;
+
+  /** 제한속도(단위 km/h) */
+  int32 speedLimit = 8;
+
+  /** 에니저 소모량(Wh) */
+  int32 evEnergyConsumption = 9;
+
+}

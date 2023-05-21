@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/mci_error_graph" app:defaultNavHost="true" app:startDestination="@id/tmapInvalidCiNotConnectedTidFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="TmapInvalidCiNotConnectedTidFragment" android:name="com.skt.tmap.mvp.fragment.TmapInvalidCiNotConnectedTidFragment" android:id="@id/tmapInvalidCiNotConnectedTidFragment">
+        <argument android:name="phone_number" app:argType="string" />
+        <argument android:name="prev_phone_number" app:argType="string" />
+        <action android:id="@id/action_tmapInvalidCiNotConnectedTidFragment_to_tmapInvalidCiConnectedTidVerticalFragment" app:destination="@id/tmapInvalidCiVerticalFragment">
+            <argument android:name="vertical_service" app:argType="com.skt.tmap.data.TmapVerticalServiceItem" app:nullable="true" />
+            <argument android:name="phone_number" app:argType="string" />
+            <argument android:name="prev_phone_number" app:argType="string" />
+        </action>
+    </fragment>
+    <fragment android:label="TmapInvalidCiConnectedTidFragment" android:name="com.skt.tmap.mvp.fragment.TmapInvalidCiConnectedTidFragment" android:id="@id/tmapInvalidCiConnectedTidFragment">
+        <argument android:name="tid" app:argType="string" />
+    </fragment>
+    <fragment android:label="TmapInvalidCiVerticalFragment" android:name="com.skt.tmap.mvp.fragment.TmapInvalidCiVerticalFragment" android:id="@id/tmapInvalidCiVerticalFragment" />
+    <fragment android:label="TmapNotAllowTidLogin" android:name="com.skt.tmap.tid.TmapNotAllowTidLogin" android:id="@id/tmapNotAllowTidLogin">
+        <argument android:name="prev_phone_number" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:label="TmapNotAllowTidLoginExistCi" android:name="com.skt.tmap.tid.TmapNotAllowTidLoginExistCi" android:id="@id/tmapNotAllowTidLoginExistCi">
+        <argument android:name="prev_phone_number" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:label="TmapMciErrorFragment" android:name="com.skt.tmap.mvp.fragment.TmapMciErrorFragment" android:id="@id/tmapMciErrorFragment">
+        <argument android:name="error_title" app:argType="string" />
+        <argument android:name="error_message" app:argType="string" />
+    </fragment>
+</navigation>

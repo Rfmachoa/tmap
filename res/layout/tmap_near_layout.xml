@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/tmap_near_layout_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/map_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/map_button" layout="@layout/map_button_layout" />
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/bottom_sheet_content" android:tag="binding_2" android:background="@drawable/bottom_sheet_main_background" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:behavior_fitToContents="false" app:behavior_hideable="false" app:behavior_peekHeight="50.0dip" app:layout_behavior="com.skt.tmap.view.TmapBottomSheetBehavior">
+            <include android:id="@id/bottom_sheet_content_layout" layout="@layout/tmap_main_bottom_content" />
+        </FrameLayout>
+        <FrameLayout android:orientation="vertical" android:id="@id/bottom_sheet_callout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:behavior_fitToContents="true" app:behavior_hideable="true" app:behavior_peekHeight="153.0dip" app:layout_behavior="com.skt.tmap.view.TmapBottomSheetBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include android:id="@id/near_toolbar" layout="@layout/near_toolbar" />
+</RelativeLayout>

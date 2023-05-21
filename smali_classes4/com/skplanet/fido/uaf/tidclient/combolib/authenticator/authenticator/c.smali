@@ -1,0 +1,821 @@
+.class public Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;
+.super Ljava/lang/Object;
+.source "AuthenticatorInteractor.java"
+
+# interfaces
+.implements Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/h;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    api = 0x17
+.end annotation
+
+
+# static fields
+.field public static final d:Ljava/lang/String; = "c"
+
+.field public static e:Lfa/b;
+
+.field public static f:Lfa/a;
+
+.field public static g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+.field public static h:Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
+
+
+# instance fields
+.field public final a:Landroid/hardware/fingerprint/FingerprintManager;
+
+.field public b:Landroid/os/CancellationSignal;
+
+.field public c:Landroid/content/Context;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Lfa/b;
+
+    invoke-direct {v0}, Lfa/b;-><init>()V
+
+    sput-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->e:Lfa/b;
+
+    .line 3
+    new-instance v0, Lfa/a;
+
+    invoke-direct {v0}, Lfa/a;-><init>()V
+
+    sput-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    .line 4
+    const-class v0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    iput-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    .line 5
+    sput-object p2, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->h:Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
+
+    .line 6
+    new-instance p2, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/b;
+
+    invoke-direct {p2, p1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/b;-><init>(Landroid/content/Context;)V
+
+    sput-object p2, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    .line 7
+    iput-object p1, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->c:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;)Ljava/util/List;
+    .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List<",
+            "Lea/a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 2
+    new-instance v1, Lea/b;
+
+    invoke-direct {v1}, Lea/b;-><init>()V
+
+    const/16 v2, 0x18
+
+    .line 3
+    iput v2, v1, Lea/b;->a:I
+
+    const/16 v3, 0x20
+
+    .line 4
+    iput-short v3, v1, Lea/b;->b:S
+
+    const-wide/16 v4, 0x2
+
+    .line 5
+    iput-wide v4, v1, Lea/b;->c:J
+
+    const/4 v4, 0x6
+
+    .line 6
+    iput v4, v1, Lea/b;->d:I
+
+    const/4 v5, 0x2
+
+    .line 7
+    iput v5, v1, Lea/b;->e:I
+
+    const/4 v5, 0x3
+
+    .line 8
+    iput v5, v1, Lea/b;->f:I
+
+    .line 9
+    sget-object v6, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/a;->b:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$AuthenticationAlgorithm;
+
+    invoke-virtual {v6}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$AuthenticationAlgorithm;->getValue()I
+
+    move-result v7
+
+    .line 10
+    iput v7, v1, Lea/b;->g:I
+
+    .line 11
+    new-instance v7, Lea/a;
+
+    invoke-direct {v7}, Lea/a;-><init>()V
+
+    .line 12
+    iput-object v1, v7, Lea/a;->c:Lea/b;
+
+    const-string v1, "CD01#07D2"
+
+    .line 13
+    iput-object v1, v7, Lea/a;->b:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    .line 14
+    iput-short v1, v7, Lea/a;->a:S
+
+    const-string v1, "UAFV1TLV"
+
+    .line 15
+    iput-object v1, v7, Lea/a;->f:Ljava/lang/String;
+
+    .line 16
+    sget-object v8, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/a;->c:Ljava/util/List;
+
+    .line 17
+    iput-object v8, v7, Lea/a;->g:Ljava/util/List;
+
+    const-string v9, "image/png"
+
+    .line 18
+    iput-object v9, v7, Lea/a;->d:Ljava/lang/String;
+
+    .line 19
+    sget-object v10, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/a;->a:Ljava/util/List;
+
+    .line 20
+    iput-object v10, v7, Lea/a;->e:Ljava/util/List;
+
+    .line 21
+    new-instance v11, Lea/b;
+
+    invoke-direct {v11}, Lea/b;-><init>()V
+
+    .line 22
+    iput v2, v11, Lea/b;->a:I
+
+    .line 23
+    iput-short v3, v11, Lea/b;->b:S
+
+    const-wide/16 v2, 0x4
+
+    .line 24
+    iput-wide v2, v11, Lea/b;->c:J
+
+    .line 25
+    iput v4, v11, Lea/b;->d:I
+
+    const/4 v2, 0x1
+
+    .line 26
+    iput v2, v11, Lea/b;->e:I
+
+    .line 27
+    iput v5, v11, Lea/b;->f:I
+
+    .line 28
+    invoke-virtual {v6}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$AuthenticationAlgorithm;->getValue()I
+
+    move-result v3
+
+    .line 29
+    iput v3, v11, Lea/b;->g:I
+
+    .line 30
+    new-instance v3, Lea/a;
+
+    invoke-direct {v3}, Lea/a;-><init>()V
+
+    .line 31
+    iput-object v11, v3, Lea/a;->c:Lea/b;
+
+    const-string v4, "CD01#07D1"
+
+    .line 32
+    iput-object v4, v3, Lea/a;->b:Ljava/lang/String;
+
+    .line 33
+    iput-short v2, v3, Lea/a;->a:S
+
+    .line 34
+    iput-object v1, v3, Lea/a;->f:Ljava/lang/String;
+
+    .line 35
+    iput-object v8, v3, Lea/a;->g:Ljava/util/List;
+
+    .line 36
+    iput-object v9, v3, Lea/a;->d:Ljava/lang/String;
+
+    .line 37
+    iput-object v10, v3, Lea/a;->e:Ljava/util/List;
+
+    const-string v1, "PIN"
+
+    .line 38
+    invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 39
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 40
+    :cond_0
+    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public a()Z
+    .locals 2
+
+    .line 42
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->c:Landroid/content/Context;
+
+    const-string v1, "android.permission.USE_FINGERPRINT"
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 43
+    :cond_0
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 0
+
+    .line 44
+    invoke-static {p1, p2}, Lga/a;->c(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public a(I)[B
+    .locals 1
+
+    .line 41
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    invoke-virtual {v0, p1}, Lfa/a;->b(I)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b(Ljava/lang/String;)Ljava/security/Signature;
+    .locals 0
+
+    .line 4
+    invoke-static {p1}, Lga/a;->b(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b([B)Lma/a;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->e:Lfa/b;
+
+    invoke-virtual {v0, p1}, Lfa/b;->a([B)Lma/a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b()Z
+    .locals 2
+
+    .line 2
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->c:Landroid/content/Context;
+
+    const-string v1, "android.permission.USE_FINGERPRINT"
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c()V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->b:Landroid/os/CancellationSignal;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-virtual {v0}, Landroid/os/CancellationSignal;->cancel()V
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->b:Landroid/os/CancellationSignal;
+
+    :cond_0
+    return-void
+.end method
+
+.method public c(J)Z
+    .locals 1
+
+    .line 5
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    invoke-interface {v0, p1, p2}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;->c(J)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public c(Ljava/lang/String;)Z
+    .locals 0
+
+    .line 1
+    invoke-static {p1}, Lga/a;->e(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public d(Ljava/lang/String;)Z
+    .locals 0
+
+    .line 1
+    invoke-static {p1}, Lga/a;->f(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public d(Ljava/lang/String;J)Z
+    .locals 1
+
+    .line 2
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    invoke-interface {v0, p1, p2, p3}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;->d(Ljava/lang/String;J)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e(Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$CommandTag;I)[B
+    .locals 1
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    invoke-virtual {v0, p1, p2}, Lfa/a;->g(Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$CommandTag;I)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public f(Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;)V
+    .locals 7
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->q()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    new-instance v0, Landroid/os/CancellationSignal;
+
+    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
+
+    iput-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->b:Landroid/os/CancellationSignal;
+
+    .line 3
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->c:Landroid/content/Context;
+
+    const-string v1, "android.permission.USE_FINGERPRINT"
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    .line 4
+    :cond_1
+    iget-object v1, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    iget-object v3, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->b:Landroid/os/CancellationSignal;
+
+    const/4 v4, 0x0
+
+    sget-object v5, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->h:Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/hardware/fingerprint/FingerprintManager;->authenticate(Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+.method public g([B[B[B[B[B[B[B)[B
+    .locals 8
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    move-object v7, p7
+
+    invoke-virtual/range {v0 .. v7}, Lfa/a;->m([B[B[B[B[B[B[B)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public h(Ljava/lang/String;)V
+    .locals 1
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    invoke-interface {v0, p1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;->b(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public i(Ljava/lang/String;)Lma/b;
+    .locals 5
+
+    new-instance v0, Lma/b;
+
+    sget-object v1, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    invoke-interface {v1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;->a()J
+
+    move-result-wide v1
+
+    sget-object v3, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->g:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;
+
+    invoke-interface {v3, p1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/g;->a(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lma/b;-><init>(JJ)V
+
+    return-object v0
+.end method
+
+.method public j(Ljava/util/List;)[B
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lea/a;",
+            ">;)[B"
+        }
+    .end annotation
+
+    .line 1
+    :try_start_0
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    sget-object v1, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;->OK:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;
+
+    invoke-virtual {v1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;->getCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1, p1}, Lfa/a;->c(ILjava/util/List;)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 2
+    :catch_0
+    sget-object p1, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$CommandTag;->TAG_UAFV1_GETINFO_CMD_RESPONSE:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$CommandTag;
+
+    sget-object v1, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;->ERR_UNKNOWN:Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;
+
+    invoke-virtual {v1}, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/AuthenticatorStatus;->getCode()I
+
+    move-result v1
+
+    invoke-virtual {p1, v0, v1}, Lfa/a;->g(Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$CommandTag;I)[B
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+.end method
+
+.method public k(ILjava/util/List;[B[B)[B
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Lla/t;",
+            ">;[B[B)[B"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lfa/a;->d(ILjava/util/List;[B[B)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public l(I[B[BLjava/util/List;[B[B)[B
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I[B[B",
+            "Ljava/util/List<",
+            "[B>;[B[B)[B"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lfa/a;->f(I[B[BLjava/util/List;[B[B)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public m(Ljava/lang/String;Z)Ljava/security/KeyPair;
+    .locals 0
+    .annotation build Landroidx/annotation/RequiresApi;
+        api = 0x17
+    .end annotation
+
+    invoke-static {p1, p2}, Lga/a;->a(Ljava/lang/String;Z)Ljava/security/KeyPair;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public n([B[B[B[B[B[B)[B
+    .locals 7
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lfa/a;->l([B[B[B[B[B[B)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public o([BLjava/lang/String;)[B
+    .locals 1
+
+    if-eqz p2, :cond_0
+
+    .line 1
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 2
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+
+    const-string p1, "UTF-8"
+
+    .line 4
+    invoke-virtual {p2, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+
+    .line 5
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p1
+
+    .line 6
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
+
+    .line 7
+    sget-object p2, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/a;->d:Ljava/lang/String;
+
+    invoke-static {p2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object p2
+
+    .line 8
+    invoke-virtual {p2, p1}, Ljava/security/MessageDigest;->update([B)V
+
+    .line 9
+    invoke-virtual {p2}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p1
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public p(ISLcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$AuthenticationAlgorithm;Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$PubKeyRepresentationFormat;)[B
+    .locals 1
+
+    sget-object v0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->f:Lfa/a;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lfa/a;->e(ISLcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$AuthenticationAlgorithm;Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/CommonConstants$PubKeyRepresentationFormat;)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final q()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->c:Landroid/content/Context;
+
+    const-string v1, "android.permission.USE_FINGERPRINT"
+
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/skplanet/fido/uaf/tidclient/combolib/authenticator/authenticator/c;->a:Landroid/hardware/fingerprint/FingerprintManager;
+
+    .line 3
+    invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    return v1
+.end method

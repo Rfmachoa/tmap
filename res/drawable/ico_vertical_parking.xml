@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0,0h24v24h-24z" />
+        <path android:fillColor="@drawable/$ico_vertical_parking__0" android:pathData="M0.799,6.581C0.799,3.388 3.387,0.8 6.579,0.8H17.418C20.611,0.8 23.199,3.388 23.199,6.581V17.42C23.199,20.612 20.611,23.2 17.418,23.2H6.579C3.387,23.2 0.799,20.612 0.799,17.42V6.581Z" />
+        <path android:fillColor="#fff5f9ff" android:pathData="M7.999,16.734C7.999,17.441 8.551,18 9.25,18C9.949,18 10.501,17.441 10.501,16.734V14.056H12.402C14.952,14.056 16.999,12.675 16.999,10.012V9.979C16.999,7.628 15.358,6 12.645,6H9.25C8.551,6 7.999,6.559 7.999,7.266V16.734ZM10.501,11.803V8.285H12.434C13.685,8.285 14.465,8.894 14.465,10.028V10.061C14.465,11.047 13.734,11.803 12.483,11.803H10.501Z" />
+    </group>
+</vector>

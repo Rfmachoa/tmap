@@ -1,0 +1,412 @@
+.class public final Lkotlin/io/path/PathTreeWalk;
+.super Ljava/lang/Object;
+.source "PathTreeWalk.kt"
+
+# interfaces
+.implements Lkotlin/sequences/m;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlin/sequences/m<",
+        "Ljava/nio/file/Path;",
+        ">;"
+    }
+.end annotation
+
+.annotation build Lkotlin/io/path/ExperimentalPathApi;
+.end annotation
+
+
+# instance fields
+.field public final a:Ljava/nio/file/Path;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public final b:[Lkotlin/io/path/PathWalkOption;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Ljava/nio/file/Path;[Lkotlin/io/path/PathWalkOption;)V
+    .locals 1
+    .param p1    # Ljava/nio/file/Path;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # [Lkotlin/io/path/PathWalkOption;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "start"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "options"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lkotlin/io/path/PathTreeWalk;->a:Ljava/nio/file/Path;
+
+    .line 3
+    iput-object p2, p0, Lkotlin/io/path/PathTreeWalk;->b:[Lkotlin/io/path/PathWalkOption;
+
+    return-void
+.end method
+
+.method public static final synthetic c(Lkotlin/io/path/PathTreeWalk;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->i()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final synthetic d(Lkotlin/io/path/PathTreeWalk;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->j()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final synthetic e(Lkotlin/io/path/PathTreeWalk;)[Ljava/nio/file/LinkOption;
+    .locals 0
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->k()[Ljava/nio/file/LinkOption;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic f(Lkotlin/io/path/PathTreeWalk;)Ljava/nio/file/Path;
+    .locals 0
+
+    iget-object p0, p0, Lkotlin/io/path/PathTreeWalk;->a:Ljava/nio/file/Path;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final g()Ljava/util/Iterator;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Ljava/nio/file/Path;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lkotlin/io/path/PathTreeWalk$bfsIterator$1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lkotlin/io/path/PathTreeWalk$bfsIterator$1;-><init>(Lkotlin/io/path/PathTreeWalk;Lkotlin/coroutines/c;)V
+
+    invoke-static {v0}, Lkotlin/sequences/q;->a(Lol/p;)Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Ljava/util/Iterator;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Ljava/nio/file/Path;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lkotlin/io/path/PathTreeWalk$dfsIterator$1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lkotlin/io/path/PathTreeWalk$dfsIterator$1;-><init>(Lkotlin/io/path/PathTreeWalk;Lkotlin/coroutines/c;)V
+
+    invoke-static {v0}, Lkotlin/sequences/q;->a(Lol/p;)Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final i()Z
+    .locals 2
+
+    iget-object v0, p0, Lkotlin/io/path/PathTreeWalk;->b:[Lkotlin/io/path/PathWalkOption;
+
+    sget-object v1, Lkotlin/io/path/PathWalkOption;->FOLLOW_LINKS:Lkotlin/io/path/PathWalkOption;
+
+    invoke-static {v0, v1}, Lkotlin/collections/ArraysKt___ArraysKt;->T8([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public iterator()Ljava/util/Iterator;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Ljava/nio/file/Path;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->l()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->g()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->h()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public final j()Z
+    .locals 2
+
+    iget-object v0, p0, Lkotlin/io/path/PathTreeWalk;->b:[Lkotlin/io/path/PathWalkOption;
+
+    sget-object v1, Lkotlin/io/path/PathWalkOption;->INCLUDE_DIRECTORIES:Lkotlin/io/path/PathWalkOption;
+
+    invoke-static {v0, v1}, Lkotlin/collections/ArraysKt___ArraysKt;->T8([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k()[Ljava/nio/file/LinkOption;
+    .locals 2
+
+    sget-object v0, Lkotlin/io/path/h;->a:Lkotlin/io/path/h;
+
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->i()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lkotlin/io/path/h;->a(Z)[Ljava/nio/file/LinkOption;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()Z
+    .locals 2
+
+    iget-object v0, p0, Lkotlin/io/path/PathTreeWalk;->b:[Lkotlin/io/path/PathWalkOption;
+
+    sget-object v1, Lkotlin/io/path/PathWalkOption;->BREADTH_FIRST:Lkotlin/io/path/PathWalkOption;
+
+    invoke-static {v0, v1}, Lkotlin/collections/ArraysKt___ArraysKt;->T8([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m(Lkotlin/sequences/o;Lkotlin/io/path/i;Lkotlin/io/path/c;Lol/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/sequences/o<",
+            "-",
+            "Ljava/nio/file/Path;",
+            ">;",
+            "Lkotlin/io/path/i;",
+            "Lkotlin/io/path/c;",
+            "Lol/l<",
+            "-",
+            "Ljava/util/List<",
+            "Lkotlin/io/path/i;",
+            ">;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Lkotlin/d1;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    iget-object v0, p2, Lkotlin/io/path/i;->a:Ljava/nio/file/Path;
+
+    .line 3
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->k()[Ljava/nio/file/LinkOption;
+
+    move-result-object v1
+
+    .line 4
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/nio/file/LinkOption;
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/nio/file/LinkOption;
+
+    invoke-static {v0, v1}, Ljava/nio/file/Files;->isDirectory(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 5
+    invoke-static {p2}, Lkotlin/io/path/k;->c(Lkotlin/io/path/i;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 6
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->j()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 7
+    invoke-virtual {p1, v0, p5}, Lkotlin/sequences/o;->d(Ljava/lang/Object;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    .line 8
+    :cond_0
+    invoke-virtual {p0}, Lkotlin/io/path/PathTreeWalk;->k()[Ljava/nio/file/LinkOption;
+
+    move-result-object p1
+
+    .line 9
+    array-length p5, p1
+
+    invoke-static {p1, p5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/nio/file/LinkOption;
+
+    array-length p5, p1
+
+    invoke-static {p1, p5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/nio/file/LinkOption;
+
+    invoke-static {v0, p1}, Ljava/nio/file/Files;->isDirectory(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 10
+    invoke-virtual {p3, p2}, Lkotlin/io/path/c;->c(Lkotlin/io/path/i;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p4, p1}, Lol/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 11
+    :cond_1
+    new-instance p1, Ljava/nio/file/FileSystemLoopException;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/nio/file/FileSystemLoopException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    const/4 p2, 0x1
+
+    new-array p3, p2, [Ljava/nio/file/LinkOption;
+
+    const/4 p4, 0x0
+
+    .line 12
+    sget-object v1, Ljava/nio/file/LinkOption;->NOFOLLOW_LINKS:Ljava/nio/file/LinkOption;
+
+    aput-object v1, p3, p4
+
+    invoke-static {p3, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Ljava/nio/file/LinkOption;
+
+    invoke-static {v0, p2}, Ljava/nio/file/Files;->exists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    .line 13
+    invoke-virtual {p1, v0, p5}, Lkotlin/sequences/o;->d(Ljava/lang/Object;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
+
+    return-object p1
+
+    .line 14
+    :cond_3
+    :goto_0
+    sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
+
+    return-object p1
+.end method

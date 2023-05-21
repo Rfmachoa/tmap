@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/around_info_listview_item_layout" android:background="@drawable/tmap_common_list_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_54dp">
+        <ImageView android:id="@id/around_info_listview_icon" android:duplicateParentState="true" android:layout_width="@dimen/tmap_around_info_template_icon_width_height" android:layout_height="@dimen/tmap_around_info_template_icon_width_height" android:layout_marginLeft="@dimen/tmap_around_info_template_icon_margin_left" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_around_info_template_name_text_size" android:textColor="@color/tmap_common_list_main_txt_color" android:id="@id/around_info_listview_text" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_around_info_template_text_margin_left_right" android:layout_marginRight="@dimen/tmap_around_info_template_text_margin_left_right" android:layout_toRightOf="@id/around_info_listview_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

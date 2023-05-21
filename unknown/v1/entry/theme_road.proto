@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message ThemeRoadEntry {
+
+  /** 정보 인덱스 Type. */
+  int32 infoIndexType = 1;
+
+  /** 테마로드 안내점 정보 */
+  repeated ThemeRoadElement elements = 2;
+
+  /** 테마로그 Key */
+  string themeRoadKey = 3;
+
+  /** 테마로그 명칭 */
+  string themeRoadName = 4;
+}
+
+message ThemeRoadElement {
+
+  /** 보간점 인덱스. */
+  int32 vtxIndex = 1;
+
+  /* 위치 X좌표(SK정규화좌표 0.01초단위) */
+  int32 x = 2 [deprecated = true];
+
+  /* 위치 Y좌표(SK정규화좌표 0.01초단위) */
+  int32 y = 3 [deprecated = true];
+
+  /** 안내Type(0 : 코스 시작점, 1 : 코스 종료점, 2 : 경유 안내점) */
+  int32 guideType = 4;
+
+  /** 카테고리 Type(테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/139926338) */
+  int32 categoryType = 5;
+
+  /** 안내지점 명칭 */
+  string name = 6;
+
+  // WGS84 절대 X좌표.
+  double wgs84Xpos = 7;
+
+  // WGS84 절대 Y좌표.
+  double wgs84Ypos = 8;
+
+}

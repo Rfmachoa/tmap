@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1";
+option java_multiple_files = true;
+
+import "v1/entry/header.proto";
+import "v1/entry/tile.proto";
+import "v1/entry/vertices.proto";
+import "v1/entry/road.proto";
+import "v1/entry/guide_point.proto";
+import "v1/entry/force_re_search.proto";
+import "v1/entry/road_name.proto";
+import "v1/entry/direction_name.proto";
+import "v1/entry/crossroad_name.proto";
+import "v1/entry/multi_crossroad.proto";
+import "v1/entry/high_speed_mode.proto";
+import "v1/entry/service_area.proto";
+import "v1/entry/tollgate.proto";
+import "v1/entry/gas_station.proto";
+import "v1/entry/danger_area.proto";
+import "v1/entry/traffic_road_guide.proto";
+import "v1/entry/link_traffic.proto";
+import "v1/entry/way_point.proto";
+import "v1/entry/hi_pass_lane.proto";
+import "v1/entry/near_link.proto";
+import "v1/entry/facility_name.proto";
+import "v1/entry/rp_link.proto";
+import "v1/entry/vms.proto";
+import "v1/entry/unexp_accident.proto";
+import "v1/entry/traffic_congestion.proto";
+import "v1/entry/ev_station.proto";
+import "v1/entry/width_restriction.proto";
+import "v1/entry/height_restriction.proto";
+import "v1/entry/weight_restriction.proto";
+import "v1/entry/water_protection_zone.proto";
+import "v1/entry/truck_time_restriction.proto";
+import "v1/entry/route_summary.proto";
+import "v1/entry/theme_road.proto";
+import "v1/entry/city_border.proto";
+import "v1/entry/highway_bus_lane_info.proto";
+
+message RouteData {
+  repeated RoutePart routeParts = 1;
+}
+
+message RoutePart {
+  HeaderEntry headerEntry = 1;
+  TileEntry tileEntry = 2;
+  VertexInTileEntry vertexInTileEntry = 3;
+  RoadEntry roadEntry = 4;
+  GuidePointEntry guidePointEntry = 5;
+  ForceReSearchEntry forceReSearchEntry = 6;
+  RoadNameEntry roadNameEntry = 7;
+  DirectionNameEntry directionNameEntry = 8;
+  CrossroadNameEntry crossroadNameEntry = 9;
+  MultiCrossroadEntry multiCrossroadEntry = 10;
+  HighSpeedModeEntry highSpeedModeEntry = 11;
+  ServiceAreaEntry serviceAreaEntry = 12;
+  TollgateEntry tollgateEntry = 13;
+  GasStationEntry gasStationEntry = 14;
+  DangerAreaEntry dangerAreaEntry = 15;
+  TrafficRoadGuideEntry trafficRoadGuideEntry = 16;
+  LinkTrafficEntry linkTrafficEntry = 17;
+  WayPointEntry wayPointEntry = 18;
+  HiPassLaneEntry hiPassLaneEntry = 19;
+  NearLinkEntry nearLinkEntry = 20;
+  FacilityNameEntry facilityNameEntry = 21;
+  RpLinkEntry rpLinkEntry = 22;
+  VmsEntry vmsEntry = 23;
+  UnexpAccidentEntry unexpAccidentEntry = 24;
+  TrafficCongestionEntry trafficCongestionEntry = 25;
+  EvStationEntry evStationEntry = 26;
+  WidthRestrictionEntry widthRestrictionEntry = 27;
+  HeightRestrictionEntry heightRestrictionEntry = 28;
+  WeightRestrictionEntry weightRestrictionEntry = 29;
+  WaterProtectionZoneEntry waterProtectionZoneEntry = 30;
+  TruckTimeRestrictionEntry truckTimeRestrictionEntry = 31;
+  RouteSummaryEntry routeSummaryEntry = 32;
+  ThemeRoadEntry themeRoadEntry = 33;
+  CityBorderEntry cityBorderEntry = 34;
+  HighwayBusLaneInfoEntry highwayBusLaneInfoEntry = 35;
+}

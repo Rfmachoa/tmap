@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/map_view_mode_layout" android:tag="layout/map_mode_button_view_0" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_56dp" android:layout_alignParentRight="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:id="@id/icon_drive_image_layout" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_56dp" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/icon_drive_3d_image" android:tag="binding_1" android:clickable="true" android:layout_width="@dimen/tmap_56dp" android:layout_height="@dimen/tmap_56dp" app:layout_constraintLeft_toLeftOf="parent" />
+        <ImageView android:id="@id/icon_drive_2d_image" android:tag="binding_2" android:clickable="true" android:layout_width="@dimen/tmap_48dp" android:layout_height="@dimen/tmap_56dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_3d_image" />
+        <View android:tag="binding_3" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_48dp" android:layout_marginTop="@dimen/tmap_2dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_3d_image" app:layout_constraintTop_toTopOf="parent" />
+        <ImageView android:id="@id/icon_drive_n_image" android:tag="binding_4" android:clickable="true" android:layout_width="@dimen/tmap_48dp" android:layout_height="@dimen/tmap_56dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_2d_image" />
+        <View android:tag="binding_5" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_48dp" android:layout_marginTop="@dimen/tmap_2dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_2d_image" app:layout_constraintTop_toTopOf="parent" />
+        <ImageView android:id="@id/icon_drive_cancel_image" android:tag="binding_6" android:clickable="true" android:layout_width="@dimen/tmap_52dp" android:layout_height="@dimen/tmap_56dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_n_image" app:layout_constraintRight_toRightOf="parent" />
+        <View android:tag="binding_7" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_48dp" android:layout_marginTop="@dimen/tmap_2dp" app:layout_constraintLeft_toRightOf="@id/icon_drive_n_image" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/map_view_mode_button" android:tag="binding_8" android:layout_width="@dimen/tmap_56dp" android:layout_height="@dimen/tmap_56dp" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/map_view_mode_button_image" android:tag="binding_9" android:layout_width="@dimen/tmap_56dp" android:layout_height="@dimen/tmap_56dp" android:layout_alignParentRight="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

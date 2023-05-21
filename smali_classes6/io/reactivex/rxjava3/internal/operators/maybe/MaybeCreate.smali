@@ -1,0 +1,114 @@
+.class public final Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate;
+.super Lmk/v;
+.source "MaybeCreate.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate$Emitter;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lmk/v<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Lmk/z;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lmk/z<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lmk/z;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "source"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lmk/z<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Lmk/v;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate;->a:Lmk/z;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public U1(Lmk/y;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "observer"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lmk/y<",
+            "-TT;>;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate$Emitter;
+
+    invoke-direct {v0, p1}, Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate$Emitter;-><init>(Lmk/y;)V
+
+    .line 2
+    invoke-interface {p1, v0}, Lmk/y;->onSubscribe(Lio/reactivex/rxjava3/disposables/c;)V
+
+    .line 3
+    :try_start_0
+    iget-object p1, p0, Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate;->a:Lmk/z;
+
+    invoke-interface {p1, v0}, Lmk/z;->a(Lmk/x;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    .line 4
+    invoke-static {p1}, Lio/reactivex/rxjava3/exceptions/a;->b(Ljava/lang/Throwable;)V
+
+    .line 5
+    invoke-virtual {v0, p1}, Lio/reactivex/rxjava3/internal/operators/maybe/MaybeCreate$Emitter;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+.end method

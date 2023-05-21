@@ -1,0 +1,328 @@
+.class public Lvc/d;
+.super Lcom/skt/aicloud/speaker/service/state/a;
+.source "ActionUCNext.java"
+
+
+# direct methods
+.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;-><init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+
+    .line 2
+    sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_NEXT:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 p1, 0x0
+
+    .line 3
+    iput-boolean p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->k:Z
+
+    const/4 p1, 0x0
+
+    .line 4
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public A(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public B()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public Z(Ltc/c;)V
+    .locals 8
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->Z(Ltc/c;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ltc/c;
+
+    invoke-virtual {p1}, Ltc/c;->n()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 3
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ltc/c;
+
+    invoke-virtual {p1}, Ltc/c;->f()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ltc/c;
+
+    invoke-virtual {v0}, Ltc/c;->m()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 5
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ltc/c;
+
+    invoke-virtual {v1}, Ltc/c;->j()Ltc/d;
+
+    move-result-object v1
+
+    .line 6
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v4, "onCardReceived : type = "
+
+    const-string v5, ", intent = "
+
+    const-string v6, ", requestId = "
+
+    .line 7
+    invoke-static {v4, v3, v5, p1, v6}, Landroidx/constraintlayout/core/parser/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    .line 8
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ltc/c;
+
+    invoke-virtual {v4}, Ltc/c;->j()Ltc/d;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", tts = "
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->c:Lcom/skt/aicloud/speaker/service/api/c;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    iget-object p1, p1, Lcom/skt/aicloud/speaker/service/api/c;->z1:Lcom/skt/aicloud/speaker/service/state/b;
+
+    .line 11
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->c:Lcom/skt/aicloud/speaker/service/api/c;
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 12
+    iget-object v0, v0, Lcom/skt/aicloud/speaker/service/api/c;->w1:Lcom/skt/aicloud/speaker/service/state/b;
+
+    .line 13
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "processReceivedCard : lastAction = "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    .line 14
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "processReceivedCard : state = "
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    const-string v2, ") = true"
+
+    const-string v6, ", canNext("
+
+    if-eqz p1, :cond_0
+
+    .line 15
+    invoke-interface {p1, v3}, Lcom/skt/aicloud/speaker/service/state/b;->m(Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    .line 16
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 17
+    invoke-interface {p1, v3}, Lcom/skt/aicloud/speaker/service/state/b;->t(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 18
+    invoke-interface {v0, v3}, Lcom/skt/aicloud/speaker/service/state/b;->m(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 19
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 20
+    invoke-interface {v0, v3}, Lcom/skt/aicloud/speaker/service/state/b;->t(Ljava/lang/String;)V
+
+    return-void
+
+    .line 21
+    :cond_1
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v0, "processReceivedCard : No action for NEXT"
+
+    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 22
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1}, Ltc/d;->j()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public k(Landroid/content/Intent;Ltc/c;)V
+    .locals 0
+
+    const-string p1, "setAction"
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    if-nez p2, :cond_0
+
+    const-string p1, "setAction : card is null"
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0, p2}, Lvc/d;->Z(Ltc/c;)V
+
+    return-void
+.end method
+
+.method public pause()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->pause()V
+
+    return-void
+.end method
+
+.method public resume(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->resume(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public stop()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->stop()V
+
+    return-void
+.end method

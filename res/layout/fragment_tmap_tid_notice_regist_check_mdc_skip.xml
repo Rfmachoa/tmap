@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/skip_layer" android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="89.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/imageViewBottomShadow" android:background="@drawable/t_id_bottom_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/tmap_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/tmap_15dp" android:textColor="#fff15e42" android:gravity="center" android:id="@id/textViewSkip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_30dp" android:layout_marginBottom="@dimen/tmap_6dp" android:text="@string/tid_skip" android:onClick="onCancelButtonClicked" android:textAlignment="center" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffb1b1b3" android:id="@id/textViewSkipExplain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:lineSpacingExtra="6.0sp" android:textAlignment="center" app:layout_constraintTop_toBottomOf="@id/textViewSkip" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,159 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message HeaderEntry {
+
+  /** 포맷 전체 데이터 크기 */
+  int64 tvasTotalSize = 1;
+
+  /** TVAS Format Version */
+  int32 tvasVersion = 2;
+
+  /** Map 제공사 코드 (10) */
+  string mapMakerCode = 3 [deprecated = true];
+
+  /** Map Version */
+  string mapVersion = 4 [deprecated = true];
+
+  /** 경로탐색 정보 */
+  HeaderRouteElement routeElement = 5;
+
+  /** 지도 정보 */
+  HeaderMapElement mapElement = 6;
+
+  /** 정보인덱스 데이터 Collection */
+  repeated HeaderInfoIndexElement infoIndexElements = 7 [deprecated = true];
+
+  /** 제공 언어 (0 : 한국어, 1 : 영어) */
+  int32 languageCode = 8;
+
+  /** Charset 코드 (0 : euc-kr, 1 : UTF-8) */
+  int32 charsetCode = 9;
+
+}
+
+message HeaderRouteElement {
+  /** 경로탐색옵션 */
+  int32 rpType = 1;
+
+  /** 요금가중치옵션
+    * 1:유/무료(요금가중치 미적용과 동일함)
+    * 2:최적요금
+    * 4:최소요금
+    * 8:무료우선
+    * 16:로직에 의한 판단 제공(default)
+    */
+  int32 fareWeightOpt = 2;
+
+  /** 출발시점 요일 구분코드(0:평일, 1:토요일, 2:휴일) */
+  int32 startDayCode = 3;
+
+  /** 다음날 요일 구분코드(0:평일, 1:토요일, 2:휴일) */
+  int32 nextDayCode = 4;
+
+  /** 경로 총 거리(단위:m) */
+  int64 totalLength = 5;
+
+  /** 경로 총 소요시간(단위:초) */
+  int64 totalTime = 6;
+
+  /** 택시요금(단위:원) */
+  int64 taxiFee = 7;
+
+  /** 경로상 통제 여부 코드
+   * 0:목적지까지 길안내 제공 정상
+   * 1:목적지 근처 통제 발생으로 '통제로 인한 목적지 근접 길안내 서비스' 제공
+   * 2:출발지 근처 통제 발생으로 '통제로 인한 길안내 서비스' 제공)
+   */
+  int32 serviceCode = 8;
+
+  /**
+   * 경로구분코드
+   * 1:추천경로
+   * 2:대안경로
+   */
+  int32 routeType = 9;
+
+  /** 대안경로 분기 보간점 */
+  int32 forkIndex = 10;
+  /** 목적지위치정보
+   ※ 0 : 방향성 재탐색을 다시하지 않아도 됨
+   ※ 1 : 방향성 재탐색 요청을 해야함
+   */
+  int32 destinationLocationType = 11;
+
+  /** 경로 변경 여부
+   * 정체회피 경로 탐색 및 정주기 재탐색시 경로가 변경되었는지 여부
+   * 0:변경없음
+   * 1:변경됨
+   */
+  int32 routeChangeCode = 12;
+
+  /** EV 잔량으로 도달 여부
+   * 0 : 불가능
+   * 1 : 가능
+   */
+  int32 evRouteReachabilityYn = 13;
+}
+
+message HeaderMapElement {
+
+  /** 좌표계 정보
+   * 1: Tyoko Bessel (default))
+   * 2: WGS84
+   */
+  int32 coordInfo = 1;
+
+  /** 타일 정보
+   * 2 : 위도의 1/12도, 경도의 1/8도의 Area내  (0~2047) 좌표를 사용하는 타일 (default)
+   */
+  int32 tileInfo = 2;
+
+  /** 출발지 X좌표 : 타일 */
+  int32 departXTilePos = 3;
+  /** 출발지 Y좌표 : 타일 */
+  int32 departYTilePos = 4;
+
+  /** 출발지 X좌표 */
+  int32 departXPosition = 5;
+  /** 출발지 Y좌표 */
+  int32 departYPosition = 6;
+
+  /** 목적지 X좌표 : 타일 */
+  int32 destXTilePos = 7;
+  /** 목적지 Y좌표 : 타일 */
+  int32 destYTilePos = 8;
+
+  /** 목적지 X좌표 */
+  int32 destXPosition = 9;
+  /** 목적지 Y좌표 */
+  int32 destYPosition = 10;
+
+  /** 출발지 명칭 */
+  string departName = 11;
+  /** 목적지 명칭 */
+  string destName = 12;
+
+  /** 총 정보인덱스 개수 */
+  int32 infoIndexCount = 13;
+
+  /** 출발지 WGS84 절대 X좌표. */
+  double departWgs84XPosition = 14;
+  /** 출발지 WGS84 절대 Y좌표. */
+  double departWgs84YPosition = 15;
+
+  /** 목적지 WGS84 절대 X좌표. */
+  double destWgs84XPosition = 16;
+  /** 목적지 WGS84 절대 Y좌표. */
+  double destWgs84YPosition = 17;
+
+}
+
+message HeaderInfoIndexElement {
+  string infoIndexId = 1;
+  int64 infoIndexSize = 2;
+}

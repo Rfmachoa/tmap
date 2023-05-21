@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@id/fido_combo_fingerprint_title" android:layout_width="fill_parent" android:layout_height="26.0dip" android:layout_marginTop="56.0dip" />
+        <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/fingerPrintLayout" android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginTop="54.0dip">
+            <ImageView android:id="@id/fido_combo_fingerprint_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/fido_finger_animation" android:importantForAccessibility="no" />
+        </RelativeLayout>
+        <TextView android:enabled="false" android:textSize="14.0dip" android:textColor="@color/fido_combo_warning_color" android:gravity="center" android:id="@id/fido_combo_fingerprint_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="20.0dip" android:lineSpacingExtra="3.0dip" />
+        <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff666666" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/fido_combo_cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="40.0dip" android:minHeight="24.0dip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message HiPassLaneEntry {
+  /** 정보 인덱스 type */
+  // default  = 0x01
+  int32 infoIndexType = 1;
+
+  /** 하이패스차로 데이터 Collection */
+  repeated HiPassLaneElement elements = 2;
+
+}
+
+message HiPassLaneElement {
+
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 톨게이트종류(1:폐쇄형, 2:개방형) */
+  int32 tollType = 2;
+
+  /** 입출구구분 (1: 진입, 2:진출) */
+  int32 inOutFlag = 3;
+
+  /** 톨게이트 ID */
+  int32 tollId = 4;
+
+  /** 이미지 코드 */
+  int32 imageCode = 5;
+
+  /** 링크종류 */
+  int32 linkType = 6;
+
+  /** 전체차로 수 */
+  int32 totalLaneCnt = 7;
+
+  /** 하이패스 차선 리스트 */
+  repeated int32 laneNumbers = 8;
+
+  /** 톨게이트명칭 데이터 */
+  string name = 9;
+
+  /** 하이패스 이미지 데이터 */
+  bytes imageData = 10 [deprecated = true];
+}

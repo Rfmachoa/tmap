@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/filter_sort_header" android:tag="layout/near_filter_sort_header_0" android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_48dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/filter_2nd_name" android:tag="binding_1" android:layout_marginLeft="@dimen/tmap_20dp" android:drawableRight="@drawable/ic_near_filter_arrow" android:layout_alignParentLeft="true" style="@style/near_sort_filter_text" />
+    <TextView android:id="@id/filter_3rd_name" android:tag="binding_2" android:layout_marginLeft="@dimen/tmap_22dp" android:drawableRight="@drawable/ic_near_filter_arrow" android:layout_toRightOf="@id/filter_2nd_name" style="@style/near_sort_filter_text" />
+    <TextView android:id="@id/sorting_name" android:tag="binding_3" android:layout_marginRight="@dimen/tmap_19dp" android:drawableLeft="@drawable/ic_near_sorting" android:layout_alignParentRight="true" style="@style/near_sort_filter_text" />
+</RelativeLayout>

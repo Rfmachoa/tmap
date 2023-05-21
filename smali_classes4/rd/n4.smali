@@ -1,0 +1,213 @@
+.class public final Lrd/n4;
+.super Ljava/lang/Object;
+.source "IntroViewBinding.java"
+
+# interfaces
+.implements La5/c;
+
+
+# instance fields
+.field public final a:Landroidx/constraintlayout/widget/ConstraintLayout;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final b:Landroid/widget/ImageView;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final c:Landroid/widget/ImageView;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/ImageView;)V
+    .locals 0
+    .param p1    # Landroidx/constraintlayout/widget/ConstraintLayout;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/widget/ImageView;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/widget/ImageView;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rootView",
+            "splashAdImage",
+            "splashCenterLogo"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lrd/n4;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    .line 3
+    iput-object p2, p0, Lrd/n4;->b:Landroid/widget/ImageView;
+
+    .line 4
+    iput-object p3, p0, Lrd/n4;->c:Landroid/widget/ImageView;
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;)Lrd/n4;
+    .locals 3
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rootView"
+        }
+    .end annotation
+
+    const v0, 0x7f0a0a78
+
+    .line 1
+    invoke-static {p0, v0}, La5/d;->a(Landroid/view/View;I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f0a0a79
+
+    .line 2
+    invoke-static {p0, v1}, La5/d;->a(Landroid/view/View;I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    .line 3
+    new-instance v2, Lrd/n4;
+
+    check-cast p0, Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    invoke-direct {v2, p0, v0, v1}, Lrd/n4;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/ImageView;)V
+
+    return-object v2
+.end method
+
+.method public static c(Landroid/view/LayoutInflater;)Lrd/n4;
+    .locals 2
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "inflater"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lrd/n4;->d(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lrd/n4;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lrd/n4;
+    .locals 2
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "parent",
+            "attachToParent"
+        }
+    .end annotation
+
+    const v0, 0x7f0d00c9
+
+    const/4 v1, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p0
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 3
+    :cond_0
+    invoke-static {p0}, Lrd/n4;->a(Landroid/view/View;)Lrd/n4;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public b()Landroidx/constraintlayout/widget/ConstraintLayout;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lrd/n4;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    return-object v0
+.end method
+
+.method public getRoot()Landroid/view/View;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lrd/n4;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    return-object v0
+.end method

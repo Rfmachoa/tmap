@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/map_ev_layout" android:background="@drawable/tooltip_default" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_32dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="@dimen/tmap_7dp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/tmap_6dp" android:paddingEnd="@dimen/tmap_5dp">
+        <ImageView android:id="@id/ev_ci_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_ff5e4c" android:id="@id/ev_first_speed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_bm" android:layout_marginStart="@dimen/tmap_5dp" android:layout_marginEnd="@dimen/tmap_1dp" />
+        <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_858585" android:id="@id/ev_first_speed_valid_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_bm" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ev_fast_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <View android:background="@color/color_bcbfc5" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_3dp" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_ff5e4c" android:id="@id/ev_fast_speed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fast_charger_short" android:fontFamily="@font/skp_go_bm" android:layout_marginStart="@dimen/tmap_5dp" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_858585" android:id="@id/ev_fast_speed_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_bm" android:layout_marginStart="@dimen/tmap_3dp" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ev_slow_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <View android:background="@color/color_bcbfc5" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_3dp" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_333333" android:id="@id/ev_slow_speed_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slow_charger_short" android:fontFamily="@font/skp_go_bm" android:layout_marginStart="@dimen/tmap_5dp" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_858585" android:id="@id/ev_slow_speed_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_bm" android:layout_marginStart="@dimen/tmap_3dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
